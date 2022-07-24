@@ -27,8 +27,6 @@
 		6EAD59D3288D9D37004DF069 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59D2288D9D37004DF069 /* ColorExtension.swift */; };
 		6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE6B1B288D072900719861 /* ReferenceApp.swift */; };
 		6EBE6B1E288D072900719861 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE6B1D288D072900719861 /* MainView.swift */; };
-		6EBE6B20288D072900719861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B1F288D072900719861 /* Assets.xcassets */; };
-		6EBE6B23288D072900719861 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B22288D072900719861 /* Preview Assets.xcassets */; };
 		6EBE6B2C288D0B9A00719861 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B2A288D0B9900719861 /* LICENSE */; };
 		6EBE6B2D288D0B9A00719861 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B2B288D0B9900719861 /* README.md */; };
 /* End PBXBuildFile section */
@@ -51,8 +49,6 @@
 		6EBE6B18288D072900719861 /* Reference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE6B1B288D072900719861 /* ReferenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceApp.swift; sourceTree = "<group>"; };
 		6EBE6B1D288D072900719861 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		6EBE6B1F288D072900719861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6EBE6B22288D072900719861 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6EBE6B2A288D0B9900719861 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6EBE6B2B288D0B9900719861 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +74,13 @@
 				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
 			);
 			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		6E5ECA2B288DF75E00F3C45D /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppIcons;
 			sourceTree = "<group>";
 		};
 		6EAD59C5288D9094004DF069 /* Models */ = {
@@ -110,7 +113,7 @@
 		6EAD59CE288D96B5004DF069 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6EBE6B1F288D072900719861 /* Assets.xcassets */,
+				6E5ECA2B288DF75E00F3C45D /* AppIcons */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -154,17 +157,8 @@
 				6EAD59CF288D96D7004DF069 /* ViewModels */,
 				6E5ECA0D288DB6CC00F3C45D /* Miscellaneous */,
 				6EAD59CE288D96B5004DF069 /* Resources */,
-				6EBE6B21288D072900719861 /* Preview Content */,
 			);
 			path = Reference;
-			sourceTree = "<group>";
-		};
-		6EBE6B21288D072900719861 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6EBE6B22288D072900719861 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6EBE6B29288D07E200719861 /* Views */ = {
@@ -249,9 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EBE6B2C288D0B9A00719861 /* LICENSE in Resources */,
-				6EBE6B23288D072900719861 /* Preview Assets.xcassets in Resources */,
 				6EBE6B2D288D0B9A00719861 /* README.md in Resources */,
-				6EBE6B20288D072900719861 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,17 +393,17 @@
 		6EBE6B27288D072900719861 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Reference/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -430,17 +422,17 @@
 		6EBE6B28288D072900719861 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Reference/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
