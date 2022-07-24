@@ -1,0 +1,25 @@
+//
+//  ColoredIconLabelStyle.swift
+//  Reference
+//
+//  Created by Prateek Prakash on 7/24/22.
+//
+
+import SwiftUI
+
+struct ColoredIconLabelStyle: LabelStyle {
+    var color: Color
+    var size: CGFloat
+    
+    func makeBody(configuration: Configuration) -> some View {
+        Label {
+            configuration.title
+                .padding(.leading, 5)
+        } icon: {
+            configuration.icon
+                .imageScale(.medium)
+                .foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 8 * size).frame(width: 28 * size, height: 28 * size).foregroundColor(color))
+        }
+    }
+}

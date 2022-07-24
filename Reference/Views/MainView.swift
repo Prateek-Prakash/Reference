@@ -44,8 +44,14 @@ struct MainView: View {
                     Text("RealmDB")
                 }
                 
-                Section("SETTINGS") {
-                    Text("Category Labels")
+                Section("MISCELLANEOUS") {
+                    NavigationLink {
+                        DeferView {
+                            VariousLabelsView()
+                        }
+                    } label: {
+                        Text("Various Labels")
+                    }
                     Text("Various Forms")
                 }
                 
