@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ReferenceApp: App {
     @AppStorage("appAppearance") var appAppearance: AppAppearance = .system
-    @AppStorage("accentColor") var accentColor: Color = .blue
+    @AppStorage("accentColor") var accentColor: Color = .red
     
     var body: some Scene {
         WindowGroup {
