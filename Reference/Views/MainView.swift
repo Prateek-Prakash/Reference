@@ -9,7 +9,7 @@ import BetterListPicker
 import SwiftUI
 
 struct MainView: View {
-    @AppStorage("appAppearance") var appAppearance: AppAppearance = .system
+    @StateObject var mainVM = MainVM()
     
     init() {
         // Translucent TabBar
@@ -20,7 +20,7 @@ struct MainView: View {
         NavigationView {
             List {
                 Section("CUSTOMIZATION") {
-                    BetterListPicker($appAppearance, pickerData: AppAppearance.allCases) {
+                    BetterListPicker(mainVM.$appAppearance, pickerData: AppAppearance.allCases) {
                         Text("App Appearance")
                     } label: {
                         Text("App Appearance")
