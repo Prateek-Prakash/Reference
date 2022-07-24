@@ -20,17 +20,9 @@ struct MainView: View {
         NavigationView {
             List {
                 Section("CUSTOMIZATION") {
-                    BetterListPicker(mainVM.$appAppearance, pickerData: AppAppearance.allCases) {
-                        Text("Appearance")
-                    } label: {
-                        Text("Appearance")
-                    }
+                    BetterListPicker("Appearance", selection: mainVM.$appAppearance, pickerData: AppAppearance.allCases)
                     ColorPicker("Accent Color", selection: mainVM.$accentColor, supportsOpacity: false)
-                    BetterListPicker(mainVM.$appIcon, pickerData: AppIcon.allCases) {
-                        Text("App Icon")
-                    } label: {
-                        Text("App Icon")
-                    }
+                    BetterListPicker("App Icon", selection: mainVM.$appIcon, pickerData: AppIcon.allCases)
                     .onChange(of: mainVM.appIcon) { appIcon in
                         mainVM.setAppIcon(appIcon)
                     }
