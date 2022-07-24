@@ -26,13 +26,13 @@ struct MainView: View {
                         Text("Appearance")
                     }
                     ColorPicker("Accent Color", selection: mainVM.$accentColor, supportsOpacity: false)
-                    NavigationLink {
-                        DeferView {
-                            AppIconView()
-                        }
+                    BetterListPicker(mainVM.$appIcon, pickerData: AppIcon.allCases) {
+                        Text("App Icon")
                     } label: {
                         Text("App Icon")
-                            .badge(mainVM.appIcon.title)
+                    }
+                    .onChange(of: mainVM.appIcon) { appIcon in
+                        mainVM.setAppIcon(appIcon)
                     }
                 }
                 
