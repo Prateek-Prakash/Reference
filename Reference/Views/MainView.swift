@@ -26,7 +26,14 @@ struct MainView: View {
                         Text("Appearance")
                     }
                     ColorPicker("Accent Color", selection: mainVM.$accentColor, supportsOpacity: false)
-                    Text("App Icon")
+                    NavigationLink {
+                        DeferView {
+                            AppIconView()
+                        }
+                    } label: {
+                        Text("App Icon")
+                            .badge(mainVM.appIcon.title)
+                    }
                 }
                 
                 Section("APPLE TECHNOLOGIES") {
