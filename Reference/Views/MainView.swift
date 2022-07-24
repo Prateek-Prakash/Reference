@@ -39,6 +39,7 @@ struct MainView: View {
                 Section("GOOGLE FIREBASE") {
                     Text("Firestore")
                     Text("Analytics")
+                    Text("Storage")
                 }
                 
                 Section("OFFLINE DATABASE") {
@@ -54,7 +55,7 @@ struct MainView: View {
                     } label: {
                         Text("Various Labels")
                     }
-                    Text("Various Forms")
+                    Text("Form Input")
                 }
                 
                 Section("ABOUT") {
