@@ -12,6 +12,7 @@
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
 		6EAD59CD288D967A004DF069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59CC288D967A004DF069 /* AppDelegate.swift */; };
 		6EAD59D1288D9958004DF069 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59D0288D9958004DF069 /* MainVM.swift */; };
+		6EAD59D3288D9D37004DF069 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59D2288D9D37004DF069 /* ColorExtension.swift */; };
 		6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE6B1B288D072900719861 /* ReferenceApp.swift */; };
 		6EBE6B1E288D072900719861 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE6B1D288D072900719861 /* MainView.swift */; };
 		6EBE6B20288D072900719861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B1F288D072900719861 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		6EAD59C8288D93D1004DF069 /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		6EAD59CC288D967A004DF069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EAD59D0288D9958004DF069 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		6EAD59D2288D9D37004DF069 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		6EBE6B18288D072900719861 /* Reference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBE6B1B288D072900719861 /* ReferenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceApp.swift; sourceTree = "<group>"; };
 		6EBE6B1D288D072900719861 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		6EAD59CA288D95AA004DF069 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6EAD59D2288D9D37004DF069 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */,
 				6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */,
 				6EAD59CD288D967A004DF069 /* AppDelegate.swift in Sources */,
+				6EAD59D3288D9D37004DF069 /* ColorExtension.swift in Sources */,
 				6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

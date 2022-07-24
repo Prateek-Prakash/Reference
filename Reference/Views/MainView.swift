@@ -25,7 +25,7 @@ struct MainView: View {
                     } label: {
                         Text("App Appearance")
                     }
-                    Text("Accent Color")
+                    ColorPicker("Accent Color", selection: mainVM.$accentColor, supportsOpacity: false)
                     Text("App Icon")
                 }
                 

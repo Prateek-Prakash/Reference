@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct ReferenceApp: App {
     @AppStorage("appAppearance") var appAppearance: AppAppearance = .system
+    @AppStorage("accentColor") var accentColor: Color = .blue
     
     var body: some Scene {
         WindowGroup {
             MainView()
                 .preferredColorScheme(appAppearance.colorScheme)
+                .accentColor(accentColor)
                 .onAppear {
                     UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
                 }
