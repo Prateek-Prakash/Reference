@@ -23,6 +23,17 @@ enum AppAppearance: String, CaseIterable {
             return .dark
         }
     }
+    
+    var systemImage: String {
+        switch self {
+        case .system:
+            return "sparkles"
+        case .light:
+            return "sun.max.fill"
+        case .dark:
+            return "moon.fill"
+        }
+    }
 }
 
 extension AppAppearance: BetterListPickerSelectable, Identifiable {

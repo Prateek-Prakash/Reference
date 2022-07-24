@@ -86,12 +86,10 @@ struct MainView: View {
             .toolbar {
                 Menu {
                     Picker(selection: mainVM.$appAppearance, label: Text("Appearance")) {
-                        Label("System", systemImage: "sparkles")
-                            .tag(AppAppearance.system)
-                        Label("Dark", systemImage: "moon.fill")
-                            .tag(AppAppearance.dark)
-                        Label("Light", systemImage: "sun.max.fill")
-                            .tag(AppAppearance.light)
+                        ForEach(AppAppearance.allCases) {
+                            Label($0.title, systemImage: $0.systemImage)
+                                .tag($0)
+                        }
                     }
                 } label: {
                     Label("Appearance", systemImage: "ellipsis.circle")
