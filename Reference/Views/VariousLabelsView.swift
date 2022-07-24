@@ -18,7 +18,7 @@ struct VariousLabelsView: View {
                         NavigationLink {
                             EmptyView()
                         } label: {
-                            Label(labelDetails.title, systemImage: labelDetails.systemName)
+                            Label(labelDetails.title, systemImage: labelDetails.systemImage)
                                 .labelStyle(.titleOnly)
                                 .badge(labelDetails.badge)
                         }
@@ -30,7 +30,7 @@ struct VariousLabelsView: View {
                         NavigationLink {
                             EmptyView()
                         } label: {
-                            Label(labelDetails.title, systemImage: labelDetails.systemName)
+                            Label(labelDetails.title, systemImage: labelDetails.systemImage)
                                 .foregroundColor(.white)
                                 .badge(labelDetails.badge)
                         }
@@ -42,7 +42,7 @@ struct VariousLabelsView: View {
                         NavigationLink {
                             EmptyView()
                         } label: {
-                            Label(labelDetails.title, systemImage: labelDetails.systemName)
+                            Label(labelDetails.title, systemImage: labelDetails.systemImage)
                                 .labelStyle(ColoredIconLabelStyle(color: labelDetails.color, size: 1))
                                 .badge(labelDetails.badge)
                         }
@@ -51,6 +51,19 @@ struct VariousLabelsView: View {
             }
             .navigationTitle("Various Labels")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Menu {
+                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                        Button {
+                            // Do Nothing
+                        } label: {
+                            Label(labelDetails.title, systemImage: labelDetails.systemImage)
+                        }
+                    }
+                } label: {
+                    Label("More", systemImage: "ellipsis.circle")
+                }
+            }
         }
     }
 }

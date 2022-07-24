@@ -9,8 +9,8 @@ import SwiftUI
 
 class VariousLabelsVM: ObservableObject {
     @Published var sampleLabels = [
-        LabelDetails(title: "Authentication", systemName: "lock.fill", color: .green),
-        LabelDetails(title: "Notifications", systemName: "bell.badge.fill", color: .red, badge: "10"),
-        LabelDetails(title: "Configuration", systemName: "gearshape.2.fill", color: .gray)
+        LabelDetails(title: "Authentication", systemImage: "lock.fill", color: .green),
+        LabelDetails(title: "Notifications", systemImage: "bell.badge.fill", color: .red, badge: "10"),
+        LabelDetails(title: "Configuration", systemImage: "gearshape.2.fill", color: .gray)
     ]
 }

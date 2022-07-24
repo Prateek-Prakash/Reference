@@ -71,9 +71,16 @@ struct MainView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Menu {
-                    
+                    Picker(selection: mainVM.$appAppearance, label: Text("Appearance")) {
+                        Label("System", systemImage: "sparkles")
+                            .tag(AppAppearance.system)
+                        Label("Dark", systemImage: "moon.fill")
+                            .tag(AppAppearance.dark)
+                        Label("Light", systemImage: "sun.max.fill")
+                            .tag(AppAppearance.light)
+                    }
                 } label: {
-                    Label("More", systemImage: "ellipsis.circle")
+                    Label("Appearance", systemImage: "ellipsis.circle")
                 }
             }
         }
