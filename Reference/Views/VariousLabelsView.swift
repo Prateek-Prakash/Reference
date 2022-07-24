@@ -8,72 +8,44 @@
 import SwiftUI
 
 struct VariousLabelsView: View {
+    @StateObject var variousLabelsVM = VariousLabelsVM()
+    
     var body: some View {
         VStack {
             List {
                 Section("Basic Label") {
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Authentication", systemImage: "lock.fill")
-                            .labelStyle(.titleOnly)
-                    }
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Notifications", systemImage: "bell.badge.fill")
-                            .labelStyle(.titleOnly)
-                            .badge(10)
-                    }
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Configuration", systemImage: "gearshape.2.fill")
-                            .labelStyle(.titleOnly)
+                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                        NavigationLink {
+                            EmptyView()
+                        } label: {
+                            Label(labelDetails.title, systemImage: labelDetails.systemName)
+                                .labelStyle(.titleOnly)
+                                .badge(labelDetails.badge)
+                        }
                     }
                 }
                 
                 Section("Icon Label") {
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Authentication", systemImage: "lock.fill")
-                            .foregroundColor(.white)
-                    }
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Notifications", systemImage: "bell.badge.fill")
-                            .foregroundColor(.white)
-                            .badge(10)
-                    }
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Configuration", systemImage: "gearshape.2.fill")
-                            .foregroundColor(.white)
+                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                        NavigationLink {
+                            EmptyView()
+                        } label: {
+                            Label(labelDetails.title, systemImage: labelDetails.systemName)
+                                .foregroundColor(.white)
+                                .badge(labelDetails.badge)
+                        }
                     }
                 }
                 
                 Section("Colored Icon Label") {
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Authentication", systemImage: "lock.fill")
-                            .labelStyle(ColoredIconLabelStyle(color: .green, size: 1))
-                    }
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Notifications", systemImage: "bell.badge.fill")
-                            .labelStyle(ColoredIconLabelStyle(color: .red, size: 1))
-                            .badge(10)
-                    }
-                    NavigationLink {
-                        EmptyView()
-                    } label: {
-                        Label("Configuration", systemImage: "gearshape.2.fill")
-                            .labelStyle(ColoredIconLabelStyle(color: .gray, size: 1))
+                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                        NavigationLink {
+                            EmptyView()
+                        } label: {
+                            Label(labelDetails.title, systemImage: labelDetails.systemName)
+                                .labelStyle(ColoredIconLabelStyle(color: labelDetails.color, size: 1))
+                                .badge(labelDetails.badge)
+                        }
                     }
                 }
             }

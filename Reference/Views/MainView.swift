@@ -56,7 +56,13 @@ struct MainView: View {
                 }
                 
                 Section("ABOUT") {
-                    Text("Acknowledgments")
+                    NavigationLink {
+                        DeferView {
+                            AttributionListView()
+                        }
+                    } label: {
+                        Text("Attributions")
+                    }
                 }
             }
             .navigationTitle("Reference")
