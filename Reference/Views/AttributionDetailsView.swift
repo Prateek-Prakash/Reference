@@ -20,7 +20,7 @@ struct AttributionDetailsView: View {
                     Text(attributionDetailsVM.license!)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .padding()
-                        .font(.system(.body, design: .monospaced))
+                        .font(.system(size: 7, design: .monospaced))
                         .foregroundColor(.secondary)
                 }
             } else {

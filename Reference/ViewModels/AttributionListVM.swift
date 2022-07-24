@@ -13,6 +13,11 @@ class AttributionListVM: ObservableObject {
             name: "BetterListPicker",
             homeUrl: "https://github.com/Jinya/BetterListPicker",
             licenseUrl: "https://raw.githubusercontent.com/Jinya/BetterListPicker/main/LICENSE"
+        ),
+        AttributionDetails(
+            name: "Firebase-iOS-SDK",
+            homeUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk",
+            licenseUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk/master/LICENSE"
         )
     ]
 }
