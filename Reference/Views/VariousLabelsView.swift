@@ -14,7 +14,7 @@ struct VariousLabelsView: View {
         VStack {
             List {
                 Section("Basic Label") {
-                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                    ForEach(variousLabelsVM.labels) { labelDetails in
                         NavigationLink {
                             EmptyView()
                         } label: {
@@ -26,7 +26,7 @@ struct VariousLabelsView: View {
                 }
                 
                 Section("Icon Label") {
-                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                    ForEach(variousLabelsVM.labels) { labelDetails in
                         NavigationLink {
                             EmptyView()
                         } label: {
@@ -38,7 +38,7 @@ struct VariousLabelsView: View {
                 }
                 
                 Section("Colored Icon Label") {
-                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                    ForEach(variousLabelsVM.labels) { labelDetails in
                         NavigationLink {
                             EmptyView()
                         } label: {
@@ -53,7 +53,7 @@ struct VariousLabelsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Menu {
-                    ForEach(variousLabelsVM.sampleLabels) { labelDetails in
+                    ForEach(variousLabelsVM.labels) { labelDetails in
                         Button {
                             // Do Nothing
                         } label: {

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct AttributionListView: View {
+    @StateObject var attributionListVM = AttributionListVM()
+    
     var body: some View {
         VStack {
             List {
-                NavigationLink {
-                    EmptyView()
-                } label: {
-                    Text("BetterListPicker")
+                ForEach(attributionListVM.attributions) { attributionDetails in
+                    NavigationLink {
+                        EmptyView()
+                    } label: {
+                        Text(attributionDetails.name)
+                    }
                 }
             }
             .navigationTitle("Attributions")

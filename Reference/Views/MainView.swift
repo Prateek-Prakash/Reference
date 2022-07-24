@@ -69,6 +69,7 @@ struct MainView: View {
             }
             .navigationTitle("Reference")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(.stack)
             .toolbar {
                 Menu {
                     Picker(selection: mainVM.$appAppearance, label: Text("Appearance")) {
