@@ -27,9 +27,19 @@ struct MainView: View {
                     Text("NFC Writer")
                 }
                 
-                Section("FIREBASE") {
+                Section("GOOGLE FIREBASE") {
                     Text("Firestore")
                     Text("Analytics")
+                }
+                
+                Section("OFFLINE DATABASE") {
+                    Text("CoreData")
+                    Text("RealmDB")
+                }
+                
+                Section("SETTINGS") {
+                    Text("Category Labels")
+                    Text("Various Forms")
                 }
                 
                 Section("ABOUT") {
