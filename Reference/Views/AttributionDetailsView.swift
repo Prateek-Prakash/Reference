@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct AttributionDetailsView: View {
-    var attributionDetails: AttributionDetails
+    @StateObject var attributionDetailsVM = AttributionDetailsVM()
     
-    @State var license: String?
+    var attributionDetails: AttributionDetails
     
     var body: some View {
         VStack {
             
-            if license != nil {
+            if attributionDetailsVM.license != nil {
                 ScrollView {
-                    Text(license!)
+                    Text(attributionDetailsVM.license!)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .padding()
                         .font(.system(.body, design: .monospaced))
@@ -31,14 +31,13 @@ struct AttributionDetailsView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem {
-                Link(destination: URL(string: attributionDetails.url)!) {
+                Link(destination: URL(string: attributionDetails.homeUrl)!) {
                     Image(systemName: "link")
                 }
             }
         }
         .task {
-            let url = URL(string: attributionDetails.license)
-            license = try! String(contentsOf: url!, encoding: .ascii)
+            attributionDetailsVM.fetchLicense(attributionDetails.licenseUrl)
         }
     }
 }

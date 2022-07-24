@@ -10,6 +10,6 @@ import SwiftUI
 struct AttributionDetails: Identifiable {
     var id: UUID = UUID()
     var name: String
-    var url: String
-    var license: String
+    var homeUrl: String
+    var licenseUrl: String
 }
