@@ -56,10 +56,9 @@ struct MainView: View {
                         Text("Various Labels")
                     }
                     Text("Form Input")
+                    Text("Logging")
                     Button {
-                        let uuid = UUID().uuidString
-                        UIPasteboard.general.string = uuid
-                        print(uuid)
+                        mainVM.generateUUID()
                     } label: {
                         Text("Generate UUID")
                     }
