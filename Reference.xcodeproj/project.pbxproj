@@ -16,6 +16,9 @@
 		6E5ECA1B288DCDD800F3C45D /* AttributionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA1A288DCDD800F3C45D /* AttributionDetails.swift */; };
 		6E5ECA1D288DD18B00F3C45D /* AttributionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA1C288DD18B00F3C45D /* AttributionDetailsView.swift */; };
 		6E5ECA1F288DD8DD00F3C45D /* AttributionDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */; };
+		6E5ECA25288DF42200F3C45D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA24288DF42200F3C45D /* Realm */; };
+		6E5ECA27288DF42200F3C45D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA26288DF42200F3C45D /* RealmSwift */; };
+		6E5ECA2A288DF4B200F3C45D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA29288DF4B200F3C45D /* Fakery */; };
 		6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAD59C3288D8CA0004DF069 /* BetterListPicker */; };
 		6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C6288D90A3004DF069 /* AppAppearance.swift */; };
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
@@ -59,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5ECA2A288DF4B200F3C45D /* Fakery in Frameworks */,
+				6E5ECA27288DF42200F3C45D /* RealmSwift in Frameworks */,
+				6E5ECA25288DF42200F3C45D /* Realm in Frameworks */,
 				6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +197,9 @@
 			name = Reference;
 			packageProductDependencies = (
 				6EAD59C3288D8CA0004DF069 /* BetterListPicker */,
+				6E5ECA24288DF42200F3C45D /* Realm */,
+				6E5ECA26288DF42200F3C45D /* RealmSwift */,
+				6E5ECA29288DF4B200F3C45D /* Fakery */,
 			);
 			productName = Reference;
 			productReference = 6EBE6B18288D072900719861 /* Reference.app */;
@@ -222,6 +231,8 @@
 			mainGroup = 6EBE6B0F288D072900719861;
 			packageReferences = (
 				6EAD59C2288D8CA0004DF069 /* XCRemoteSwiftPackageReference "BetterListPicker" */,
+				6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */,
+				6E5ECA28288DF4B200F3C45D /* XCRemoteSwiftPackageReference "Fakery" */,
 			);
 			productRefGroup = 6EBE6B19288D072900719861 /* Products */;
 			projectDirPath = "";
@@ -469,17 +480,48 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		6E5ECA28288DF4B200F3C45D /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		6EAD59C2288D8CA0004DF069 /* XCRemoteSwiftPackageReference "BetterListPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jinya/BetterListPicker.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6E5ECA24288DF42200F3C45D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		6E5ECA26288DF42200F3C45D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6E5ECA29288DF4B200F3C45D /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E5ECA28288DF4B200F3C45D /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
 		6EAD59C3288D8CA0004DF069 /* BetterListPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6EAD59C2288D8CA0004DF069 /* XCRemoteSwiftPackageReference "BetterListPicker" */;

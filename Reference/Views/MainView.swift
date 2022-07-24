@@ -56,7 +56,6 @@ struct MainView: View {
                         Text("Various Labels")
                     }
                     Text("Form Input")
-                    Text("Logging")
                     Button {
                         mainVM.generateUUID()
                     } label: {

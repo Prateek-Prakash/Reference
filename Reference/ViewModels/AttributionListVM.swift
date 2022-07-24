@@ -15,9 +15,19 @@ class AttributionListVM: ObservableObject {
             licenseUrl: "https://raw.githubusercontent.com/Jinya/BetterListPicker/main/LICENSE"
         ),
         AttributionDetails(
+            name: "Fakery",
+            homeUrl: "https://raw.githubusercontent.com/vadymmarkov/Fakery",
+            licenseUrl: "https://raw.githubusercontent.com/vadymmarkov/Fakery/master/LICENSE.md"
+        ),
+        AttributionDetails(
             name: "Firebase-iOS-SDK",
             homeUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk",
             licenseUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk/master/LICENSE"
+        ),
+        AttributionDetails(
+            name: "Realm-Swift",
+            homeUrl: "https://raw.githubusercontent.com/realm/realm-swift",
+            licenseUrl: "https://raw.githubusercontent.com/realm/realm-swift/master/LICENSE"
         )
     ]
 }
