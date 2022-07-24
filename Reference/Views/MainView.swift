@@ -21,9 +21,9 @@ struct MainView: View {
             List {
                 Section("CUSTOMIZATION") {
                     BetterListPicker(mainVM.$appAppearance, pickerData: AppAppearance.allCases) {
-                        Text("App Appearance")
+                        Text("Appearance")
                     } label: {
-                        Text("App Appearance")
+                        Text("Appearance")
                     }
                     ColorPicker("Accent Color", selection: mainVM.$accentColor, supportsOpacity: false)
                     Text("App Icon")
