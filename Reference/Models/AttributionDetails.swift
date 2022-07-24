@@ -11,4 +11,5 @@ struct AttributionDetails: Identifiable {
     var id: UUID = UUID()
     var name: String
     var url: String
+    var license: String
 }

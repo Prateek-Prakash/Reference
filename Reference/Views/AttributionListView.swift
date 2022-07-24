@@ -15,7 +15,9 @@ struct AttributionListView: View {
             List {
                 ForEach(attributionListVM.attributions) { attributionDetails in
                     NavigationLink {
-                        EmptyView()
+                        DeferView {
+                            AttributionDetailsView(attributionDetails: attributionDetails)
+                        }
                     } label: {
                         Text(attributionDetails.name)
                     }
