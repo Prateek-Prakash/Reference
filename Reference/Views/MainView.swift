@@ -29,9 +29,11 @@ struct MainView: View {
                     Text("App Icon")
                 }
                 
-                Section("CORENFC") {
-                    Text("NFC Reader")
-                    Text("NFC Writer")
+                Section("APPLE TECHNOLOGIES") {
+                    Text("Core NFC")
+                    Text("CloudKit")
+                    Text("MapKit")
+                    Text("StoreKit")
                 }
                 
                 Section("GOOGLE FIREBASE") {
@@ -40,8 +42,8 @@ struct MainView: View {
                 }
                 
                 Section("OFFLINE DATABASE") {
-                    Text("CoreData")
-                    Text("RealmDB")
+                    Text("Core Data")
+                    Text("Realm")
                 }
                 
                 Section("MISCELLANEOUS") {
@@ -69,7 +71,7 @@ struct MainView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Menu {
-                    // Menu Items
+                    
                 } label: {
                     Label("More", systemImage: "ellipsis.circle")
                 }
