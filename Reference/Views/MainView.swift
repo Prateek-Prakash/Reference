@@ -55,6 +55,13 @@ struct MainView: View {
             }
             .navigationTitle("Reference")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Menu {
+                    // Menu Items
+                } label: {
+                    Label("More", systemImage: "ellipsis.circle")
+                }
+            }
         }
     }
 }
