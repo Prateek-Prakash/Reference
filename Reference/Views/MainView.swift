@@ -5,9 +5,12 @@
 //  Created by Prateek Prakash on 7/24/22.
 //
 
+import BetterListPicker
 import SwiftUI
 
 struct MainView: View {
+    @AppStorage("appAppearance") var appAppearance: AppAppearance = .system
+    
     init() {
         // Translucent TabBar
         UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
@@ -17,7 +20,11 @@ struct MainView: View {
         NavigationView {
             List {
                 Section("CUSTOMIZATION") {
-                    Text("Appearance")
+                    BetterListPicker($appAppearance, pickerData: AppAppearance.allCases) {
+                        Text("App Appearance")
+                    } label: {
+                        Text("App Appearance")
+                    }
                     Text("Accent Color")
                     Text("App Icon")
                 }
