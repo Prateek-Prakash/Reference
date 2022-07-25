@@ -34,11 +34,11 @@ struct MainView: View {
                 }
                 
                 Section("GOOGLE FIREBASE") {
-                    Text("Fire Auth")
-                    Text("Fire Firestore")
-                    Text("Fire Analytics")
-                    Text("Fire Storage")
-                    Text("Fire Remote Config")
+                    Text("Authentication")
+                    Text("Firestore")
+                    Text("Analytics")
+                    Text("Storage")
+                    Text("Remote Config")
                 }
                 
                 Section("OFFLINE DATABASE") {
