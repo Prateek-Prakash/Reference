@@ -87,6 +87,15 @@ struct FakeryDataView: View {
                         Text("Double [0 ••• 1]")
                             .badge(mock.number.randomCGFloat(min: 0, max: 1).description)
                     }
+                    
+                    Section("Vehicle") {
+                        Text("Manufacturer")
+                            .badge(mock.vehicle.manufacture())
+                        Text("Make")
+                            .badge(mock.vehicle.make())
+                        Text("Color")
+                            .badge(mock.vehicle.colors())
+                    }
                 }
             }
             .navigationTitle("Fakery Data")
