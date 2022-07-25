@@ -28,6 +28,7 @@ struct MainView: View {
                     Text("CloudKit")
                     Text("MapKit")
                     Text("StoreKit")
+                    Text("VisionKit")
                 }
                 
                 Section("GOOGLE FIREBASE") {
@@ -50,6 +51,7 @@ struct MainView: View {
                         Text("Various Labels")
                     }
                     Text("Form Input")
+                    Text("Fakery Mock Data")
                     Button {
                         mainVM.generateUUID()
                     } label: {
