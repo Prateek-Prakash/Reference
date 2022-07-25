@@ -12,6 +12,8 @@ struct ReferenceApp: App {
     @AppStorage("appAppearance") var appAppearance: AppAppearance = .system
     @AppStorage("accentColor") var accentColor: Color = .red
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
             MainView()
