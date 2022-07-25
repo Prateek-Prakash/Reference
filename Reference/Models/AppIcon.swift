@@ -13,6 +13,28 @@ enum AppIcon: String, CaseIterable {
     case black = "Black"
     case blue = "Blue"
     case purple = "Purple"
+    case green = "Green"
+    case mint = "Mint"
+    case orange = "Orange"
+    
+    var baseColor: Color {
+        switch self {
+        case .red:
+            return .red
+        case .black:
+            return .black
+        case .blue:
+            return .blue
+        case .purple:
+            return .purple
+        case .green:
+            return .green
+        case .mint:
+            return .mint
+        case .orange:
+            return .orange
+        }
+    }
 }
 
 extension AppIcon: BetterListPickerSelectable, Identifiable {

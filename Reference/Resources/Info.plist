@@ -20,6 +20,27 @@
 					<string>Blue</string>
 				</array>
 			</dict>
+			<key>Green</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Green</string>
+				</array>
+			</dict>
+			<key>Mint</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Mint</string>
+				</array>
+			</dict>
+			<key>Orange</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Orange</string>
+				</array>
+			</dict>
 			<key>Purple</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
