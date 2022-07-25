@@ -39,9 +39,13 @@ class RemoteConfigVM: ObservableObject {
                 }
                 let dataVal = rConfig.configValue(forKey: "jsonKey").dataValue
                 DispatchQueue.main.async {
-                    self.jsonConfig = try JSONDecoder().decode(JSONConfig.self, from: dataVal)
+                    do {
+                        self.jsonConfig = try JSONDecoder().decode(JSONConfig.self, from: dataVal)
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
                 }
-                    return
+                return
             default:
                 print("Error Activating RemoteConfig")
                 return
