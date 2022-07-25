@@ -11,11 +11,6 @@ import SwiftUI
 struct MainView: View {
     @StateObject var mainVM = MainVM()
     
-    init() {
-        // Translucent TabBar
-        UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
-    }
-    
     var body: some View {
         NavigationView {
             List {
