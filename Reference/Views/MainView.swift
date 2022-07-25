@@ -39,7 +39,13 @@ struct MainView: View {
                     Text("Firestore")
                     Text("Analytics")
                     Text("Storage")
-                    Text("Remote Config")
+                    NavigationLink {
+                        DeferView {
+                            RemoteConfigView()
+                        }
+                    } label: {
+                        Text("Remote Config")
+                    }
                 }
                 
                 Section("OFFLINE DATABASE") {

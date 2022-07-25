@@ -12,6 +12,6 @@ class AttributionDetailsVM: ObservableObject {
     
     func fetchLicense(_ licenseUrl: String) {
         let url = URL(string: licenseUrl)
-        license = try! String(contentsOf: url!, encoding: .ascii)
+        license = try! String(contentsOf: url!, encoding: .utf8)
     }
 }
