@@ -52,7 +52,6 @@ struct MainView: View {
                     } label: {
                         Text("Various Labels")
                     }
-                    Text("Form Input")
                     NavigationLink {
                         DeferView {
                             FakeryDataView()
