@@ -53,6 +53,7 @@
 		6ED50A99288E165B008F0E59 /* Orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A90288E165B008F0E59 /* Orange@3x.png */; };
 		6ED50A9B288EEBD0008F0E59 /* FakeryDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */; };
 		6ED50A9D288EEC63008F0E59 /* FakeryDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */; };
+		6ED50A9F288F2550008F0E59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		6ED50A90288E165B008F0E59 /* Orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orange@3x.png"; sourceTree = "<group>"; };
 		6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeryDataView.swift; sourceTree = "<group>"; };
 		6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeryDataVM.swift; sourceTree = "<group>"; };
+		6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,15 +183,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		6EAD59CE288D96B5004DF069 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6E5ECA44288DFC5C00F3C45D /* Info.plist */,
-				6E5ECA2B288DF75E00F3C45D /* AppIcons */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		6EAD59CF288D96D7004DF069 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,13 +216,15 @@
 		6EBE6B1A288D072900719861 /* Reference */ = {
 			isa = PBXGroup;
 			children = (
+				6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */,
+				6E5ECA44288DFC5C00F3C45D /* Info.plist */,
+				6E5ECA2B288DF75E00F3C45D /* AppIcons */,
 				6EAD59CB288D9660004DF069 /* Application */,
 				6EAD59CA288D95AA004DF069 /* Extensions */,
 				6EAD59C5288D9094004DF069 /* Models */,
 				6EBE6B29288D07E200719861 /* Views */,
 				6EAD59CF288D96D7004DF069 /* ViewModels */,
 				6E5ECA0D288DB6CC00F3C45D /* Miscellaneous */,
-				6EAD59CE288D96B5004DF069 /* Resources */,
 			);
 			path = Reference;
 			sourceTree = "<group>";
@@ -333,6 +328,7 @@
 				6ED50A98288E165B008F0E59 /* Orange.png in Resources */,
 				6ED50A94288E165B008F0E59 /* Green@3x.png in Resources */,
 				6E5ECA3C288DF9F800F3C45D /* Black.png in Resources */,
+				6ED50A9F288F2550008F0E59 /* GoogleService-Info.plist in Resources */,
 				6E5ECA3F288DF9F800F3C45D /* Black@3x.png in Resources */,
 				6E5ECA42288DF9F800F3C45D /* Red.png in Resources */,
 				6E5ECA3B288DF9F800F3C45D /* Red@2x.png in Resources */,
@@ -498,7 +494,7 @@
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reference/Resources/Info.plist;
+				INFOPLIST_FILE = Reference/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -528,7 +524,7 @@
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reference/Resources/Info.plist;
+				INFOPLIST_FILE = Reference/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
