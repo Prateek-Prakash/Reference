@@ -51,7 +51,13 @@ struct MainView: View {
                         Text("Various Labels")
                     }
                     Text("Form Input")
-                    Text("Fakery Mock Data")
+                    NavigationLink {
+                        DeferView {
+                            FakeryDataView()
+                        }
+                    } label: {
+                        Text("Fakery Data")
+                    }
                     Button {
                         mainVM.generateUUID()
                     } label: {
