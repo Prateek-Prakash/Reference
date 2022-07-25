@@ -45,6 +45,7 @@ struct MainView: View {
                 Section("OFFLINE DATABASE") {
                     Text("Core Data")
                     Text("Realm")
+                    Text("SQLite")
                 }
                 
                 Section("MISCELLANEOUS") {
