@@ -24,9 +24,11 @@ struct MainView: View {
                 }
                 
                 Section("APPLE TECHNOLOGIES") {
+                    Text("ARKit")
                     Text("Core NFC")
                     Text("CloudKit")
                     Text("MapKit")
+                    Text("SceneKit")
                     Text("StoreKit")
                     Text("VisionKit")
                 }
