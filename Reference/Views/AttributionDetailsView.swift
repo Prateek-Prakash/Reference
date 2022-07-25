@@ -14,7 +14,6 @@ struct AttributionDetailsView: View {
     
     var body: some View {
         VStack {
-            
             if attributionDetailsVM.license != nil {
                 ScrollView {
                     Text(attributionDetailsVM.license!)
