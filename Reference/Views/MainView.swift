@@ -27,7 +27,13 @@ struct MainView: View {
                     Text("ARKit")
                     Text("Core NFC")
                     Text("CloudKit")
-                    Text("MapKit")
+                    NavigationLink {
+                        DeferView {
+                            MapKitView()
+                        }
+                    } label: {
+                        Text("MapKit")
+                    }
                     Text("SceneKit")
                     Text("StoreKit")
                     Text("VisionKit")
