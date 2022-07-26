@@ -63,6 +63,13 @@ struct MainView: View {
                 Section("MISCELLANEOUS") {
                     NavigationLink {
                         DeferView {
+                            HierarchicalListView()
+                        }
+                    } label: {
+                        Text("Hierarchical List")
+                    }
+                    NavigationLink {
+                        DeferView {
                             VariousLabelsView()
                         }
                     } label: {
