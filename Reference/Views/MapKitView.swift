@@ -42,16 +42,15 @@ struct MapKitView: View {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Text("EXIT")
+                        Image(systemName: "xmark")
                             .font(.system(size: 20, weight: .heavy, design: .rounded))
                             .foregroundColor(foregroundColor)
-                            .padding(.vertical, 15)
-                            .padding(.horizontal, 40)
+                            .padding()
                     }
                     .background(backgroundColor)
-                    .cornerRadius(100)
-                    .shadow(radius: 5)
-                    .shadow(radius: 5)
+                    .cornerRadius(8)
+                    .shadow(radius: 4)
+                    .shadow(radius: 4)
                 }
                 .padding()
             }
