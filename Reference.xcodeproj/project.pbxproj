@@ -50,6 +50,7 @@
 		6ED50AC2288FAA26008F0E59 /* HierarchicalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */; };
 		6ED50AC4288FAB3F008F0E59 /* HierarchicalListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */; };
 		6ED50AC628902721008F0E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50AC528902721008F0E59 /* Assets.xcassets */; };
+		6ED50AC828903C9F008F0E59 /* PathRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC728903C9F008F0E59 /* PathRef.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalListView.swift; sourceTree = "<group>"; };
 		6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalListVM.swift; sourceTree = "<group>"; };
 		6ED50AC528902721008F0E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ED50AC728903C9F008F0E59 /* PathRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRef.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				6ED50A86288E04B1008F0E59 /* AppIcon.swift */,
 				6ED50AB7288F5B41008F0E59 /* JSONObjectConfig.swift */,
 				6ED50AB9288F5B99008F0E59 /* JSONArrayConfig.swift */,
+				6ED50AC728903C9F008F0E59 /* PathRef.swift */,
 				6E5ECA16288DC26100F3C45D /* LabelDetails.swift */,
 				6E5ECA1A288DCDD800F3C45D /* AttributionDetails.swift */,
 			);
@@ -330,6 +333,7 @@
 				6ED50AC2288FAA26008F0E59 /* HierarchicalListView.swift in Sources */,
 				6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */,
 				6ED50AB8288F5B41008F0E59 /* JSONObjectConfig.swift in Sources */,
+				6ED50AC828903C9F008F0E59 /* PathRef.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

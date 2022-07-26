@@ -13,10 +13,10 @@ struct HierarchicalListView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(hierarchicalListVM.rawPaths, id: \.self) { path in
+                OutlineGroup(hierarchicalListVM.pathRefs, children: \.children) { pathRef in
                     HStack {
-                        Image(systemName: "doc.fill")
-                        Text(path)
+                        Image(systemName: pathRef.icon)
+                        Text(pathRef.title)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
