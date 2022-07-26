@@ -39,5 +39,5 @@ enum AppIcon: String, CaseIterable {
 
 extension AppIcon: BetterListPickerSelectable, Identifiable {
     var id: String { rawValue }
-    var title: String { rawValue }
+    var title: String { "\(rawValue) Icon" }
 }

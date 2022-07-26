@@ -13,7 +13,7 @@ class MainVM: ObservableObject {
     @AppStorage("appIcon") var appIcon: AppIcon = .red
     
     func setAppIcon(_ appIcon: AppIcon) {
-        UIApplication.shared.setAlternateIconName(appIcon.title){ error in
+        UIApplication.shared.setAlternateIconName(appIcon.id){ error in
             if let error = error {
                 print(error.localizedDescription)
             } else {

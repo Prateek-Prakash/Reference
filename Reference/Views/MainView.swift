@@ -18,9 +18,9 @@ struct MainView: View {
                     BetterListPicker("Appearance", selection: mainVM.$appAppearance, pickerData: AppAppearance.allCases)
                     ColorPicker("Accent Color", selection: mainVM.$accentColor, supportsOpacity: false)
                     BetterListPicker("App Icon", selection: mainVM.$appIcon, pickerData: AppIcon.allCases)
-                    .onChange(of: mainVM.appIcon) { appIcon in
-                        mainVM.setAppIcon(appIcon)
-                    }
+                        .onChange(of: mainVM.appIcon) { appIcon in
+                            mainVM.setAppIcon(appIcon)
+                        }
                 }
                 
                 Section("APPLE TECHNOLOGIES") {
@@ -93,12 +93,17 @@ struct MainView: View {
                 Menu {
                     Picker(selection: mainVM.$appAppearance, label: Text("Appearance")) {
                         ForEach(AppAppearance.allCases) {
-                            Label($0.title, systemImage: $0.systemImage)
-                                .tag($0)
+                            Label($0.title, systemImage: $0.systemImage).tag($0)
+                        }
+                    }
+                    
+                    Picker(selection: mainVM.$appIcon, label: Text("App Icon")) {
+                        ForEach(AppIcon.allCases) {
+                            Text($0.title).tag($0)
                         }
                     }
                 } label: {
-                    Label("Appearance", systemImage: "ellipsis.circle")
+                    Label("Customization", systemImage: "paintbrush.pointed")
                 }
             }
         }
