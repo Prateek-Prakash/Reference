@@ -61,9 +61,3 @@ struct MapKitView: View {
         }
     }
 }
-
-struct MapKitView_Preview: PreviewProvider {
-    static var previews: some View {
-        MapKitView()
-    }
-}
