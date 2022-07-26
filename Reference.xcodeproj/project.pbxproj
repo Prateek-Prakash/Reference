@@ -65,9 +65,8 @@
 		6ED50AB2288F29FE008F0E59 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6ED50AB1288F29FE008F0E59 /* FirebaseStorage */; };
 		6ED50AB4288F3E86008F0E59 /* RemoteConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AB3288F3E86008F0E59 /* RemoteConfigView.swift */; };
 		6ED50AB6288F3ED4008F0E59 /* RemoteConfigVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AB5288F3ED4008F0E59 /* RemoteConfigVM.swift */; };
-		6ED50AB8288F5B41008F0E59 /* JSONConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AB7288F5B41008F0E59 /* JSONConfig.swift */; };
-		6ED50ABA288F5B99008F0E59 /* TweakConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AB9288F5B99008F0E59 /* TweakConfig.swift */; };
-		6ED50ABC288F5BDB008F0E59 /* JSONConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50ABB288F5BDB008F0E59 /* JSONConfigView.swift */; };
+		6ED50AB8288F5B41008F0E59 /* JSONObjectConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AB7288F5B41008F0E59 /* JSONObjectConfig.swift */; };
+		6ED50ABA288F5B99008F0E59 /* JSONArrayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AB9288F5B99008F0E59 /* JSONArrayConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,9 +117,8 @@
 		6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6ED50AB3288F3E86008F0E59 /* RemoteConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigView.swift; sourceTree = "<group>"; };
 		6ED50AB5288F3ED4008F0E59 /* RemoteConfigVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigVM.swift; sourceTree = "<group>"; };
-		6ED50AB7288F5B41008F0E59 /* JSONConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConfig.swift; sourceTree = "<group>"; };
-		6ED50AB9288F5B99008F0E59 /* TweakConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweakConfig.swift; sourceTree = "<group>"; };
-		6ED50ABB288F5BDB008F0E59 /* JSONConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConfigView.swift; sourceTree = "<group>"; };
+		6ED50AB7288F5B41008F0E59 /* JSONObjectConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObjectConfig.swift; sourceTree = "<group>"; };
+		6ED50AB9288F5B99008F0E59 /* JSONArrayConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArrayConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +186,8 @@
 			children = (
 				6EAD59C6288D90A3004DF069 /* AppAppearance.swift */,
 				6ED50A86288E04B1008F0E59 /* AppIcon.swift */,
-				6ED50AB7288F5B41008F0E59 /* JSONConfig.swift */,
-				6ED50AB9288F5B99008F0E59 /* TweakConfig.swift */,
+				6ED50AB7288F5B41008F0E59 /* JSONObjectConfig.swift */,
+				6ED50AB9288F5B99008F0E59 /* JSONArrayConfig.swift */,
 				6E5ECA16288DC26100F3C45D /* LabelDetails.swift */,
 				6E5ECA1A288DCDD800F3C45D /* AttributionDetails.swift */,
 			);
@@ -222,7 +220,6 @@
 				6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */,
 				6E5ECA18288DCCFA00F3C45D /* AttributionListVM.swift */,
 				6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */,
-				6ED50ABB288F5BDB008F0E59 /* JSONConfigView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 			files = (
 				6EBE6B1E288D072900719861 /* MainView.swift in Sources */,
 				6EAD59D1288D9958004DF069 /* MainVM.swift in Sources */,
-				6ED50ABC288F5BDB008F0E59 /* JSONConfigView.swift in Sources */,
 				6E5ECA13288DBC4100F3C45D /* AttributionListView.swift in Sources */,
 				6E5ECA1F288DD8DD00F3C45D /* AttributionDetailsVM.swift in Sources */,
 				6ED50A9B288EEBD0008F0E59 /* FakeryDataView.swift in Sources */,
@@ -404,14 +400,14 @@
 				6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */,
 				6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */,
 				6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */,
-				6ED50ABA288F5B99008F0E59 /* TweakConfig.swift in Sources */,
+				6ED50ABA288F5B99008F0E59 /* JSONArrayConfig.swift in Sources */,
 				6E5ECA17288DC26100F3C45D /* LabelDetails.swift in Sources */,
 				6EAD59CD288D967A004DF069 /* AppDelegate.swift in Sources */,
 				6E5ECA1B288DCDD800F3C45D /* AttributionDetails.swift in Sources */,
 				6EAD59D3288D9D37004DF069 /* ColorExtension.swift in Sources */,
 				6E5ECA0C288DB15100F3C45D /* VariousLabelsView.swift in Sources */,
 				6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */,
-				6ED50AB8288F5B41008F0E59 /* JSONConfig.swift in Sources */,
+				6ED50AB8288F5B41008F0E59 /* JSONObjectConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

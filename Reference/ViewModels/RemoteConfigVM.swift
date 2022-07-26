@@ -12,7 +12,9 @@ class RemoteConfigVM: ObservableObject {
     @Published var stringValue = ""
     @Published var numberValue = Double(0)
     @Published var boolValue = false
-    @Published var jsonConfig: JSONConfig? = nil
+    @Published var jsonConfig: JSONObjectConfig? = nil
+    
+    @Published var didPullConfig = false
     
     func fetchRemoteConfig() async throws {
         let rConfig = RemoteConfig.remoteConfig()
@@ -40,10 +42,13 @@ class RemoteConfigVM: ObservableObject {
                 let dataVal = rConfig.configValue(forKey: "jsonKey").dataValue
                 DispatchQueue.main.async {
                     do {
-                        self.jsonConfig = try JSONDecoder().decode(JSONConfig.self, from: dataVal)
+                        self.jsonConfig = try JSONDecoder().decode(JSONObjectConfig.self, from: dataVal)
                     } catch let error {
                         print(error.localizedDescription)
                     }
+                }
+                DispatchQueue.main.async {
+                    self.didPullConfig = true
                 }
                 return
             default:

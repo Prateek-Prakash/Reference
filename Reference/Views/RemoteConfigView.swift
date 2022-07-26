@@ -12,23 +12,35 @@ struct RemoteConfigView: View {
     
     var body: some View {
         VStack {
-            List {
-                Section {
-                    Text("String Config")
-                        .badge(remoteConfigVM.stringValue)
-                    Text("Number Config")
-                        .badge(remoteConfigVM.numberValue.description)
-                    Text("Boolean Config")
-                        .badge(remoteConfigVM.boolValue.description.capitalized)
-                    if let jsonConfig = remoteConfigVM.jsonConfig {
-                        NavigationLink {
-                            DeferView {
-                                JSONConfigView(jsonConfig: jsonConfig)
+            VStack {
+                if remoteConfigVM.didPullConfig {
+                    List {
+                        Section("BASIC CONFIG") {
+                            Text("String Config")
+                                .badge(remoteConfigVM.stringValue)
+                            Text("Number Config")
+                                .badge(remoteConfigVM.numberValue.description)
+                            Text("Boolean Config")
+                                .badge(remoteConfigVM.boolValue.description.capitalized)
+                        }
+                        if let jsonConfig = remoteConfigVM.jsonConfig {
+                            Section("JSON CONFIG (OBJECT)") {
+                                Text("Mode")
+                                    .badge(jsonConfig.mode)
+                                Text("Duration")
+                                    .badge(jsonConfig.duration)
                             }
-                        } label: {
-                            Text("JSON Config")
+                            
+                            Section("JSON CONFIG (ARRAY)") {
+                                ForEach(jsonConfig.tweaks) { tweak in
+                                    Text(tweak.name)
+                                        .badge(tweak.damage >= 0 ? "+\(tweak.damage)" : tweak.damage.description)
+                                }
+                            }
                         }
                     }
+                } else {
+                    ProgressView()
                 }
             }
             .navigationTitle("Remote Config")
