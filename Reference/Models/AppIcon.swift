@@ -9,13 +9,13 @@ import BetterListPicker
 import SwiftUI
 
 enum AppIcon: String, CaseIterable {
-    case black = "AppIcon-Black"
-    case blue = "AppIcon-Blue"
-    case green = "AppIcon-Green"
-    case mint = "AppIcon-Mint"
-    case orange = "AppIcon-Orange"
-    case purple = "AppIcon-Purple"
-    case red = "AppIcon-Red"
+    case black = "AppIcon Black"
+    case blue = "AppIcon Blue"
+    case green = "AppIcon Green"
+    case mint = "AppIcon Mint"
+    case orange = "AppIcon Orange"
+    case purple = "AppIcon Purple"
+    case red = "AppIcon Red"
     
     var baseColor: Color {
         switch self {
@@ -33,6 +33,25 @@ enum AppIcon: String, CaseIterable {
             return .purple
         case .red:
             return .red
+        }
+    }
+    
+    var assetName: String? {
+        switch self {
+        case .black:
+            return nil
+        case .blue:
+            return "AppIcon-Blue"
+        case .green:
+            return "AppIcon-Green"
+        case .mint:
+            return "AppIcon-Mint"
+        case .orange:
+            return "AppIcon-Orange"
+        case .purple:
+            return "AppIcon-Purple"
+        case .red:
+            return "AppIcon-Red"
         }
     }
 }

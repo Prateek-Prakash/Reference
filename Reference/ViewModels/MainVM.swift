@@ -13,13 +13,7 @@ class MainVM: ObservableObject {
     @AppStorage("appIcon") var appIcon: AppIcon = .black
     
     func setAppIcon(_ appIcon: AppIcon) {
-        UIApplication.shared.setAlternateIconName(appIcon.id){ error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("Successfully Changed AppIcon")
-            }
-        }
+        UIApplication.shared.setAlternateIconName(appIcon.assetName)
     }
     
     func generateUUID() {
