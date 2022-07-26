@@ -14,7 +14,11 @@ struct HierarchicalListView: View {
         VStack {
             List {
                 ForEach(hierarchicalListVM.rawPaths, id: \.self) { path in
-                    Text(path)
+                    HStack {
+                        Image(systemName: "doc.fill")
+                        Text(path)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                 }
             }
             .listStyle(.grouped)
