@@ -19,17 +19,17 @@ class HierarchicalListVM: ObservableObject {
                     children: [
                         PathRef(
                             title: "S01E01.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         ),
                         PathRef(
                             title: "S01E02.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         ),
                         PathRef(
                             title: "S01E03.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         )
                     ]
@@ -40,17 +40,17 @@ class HierarchicalListVM: ObservableObject {
                     children: [
                         PathRef(
                             title: "S02E01.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         ),
                         PathRef(
                             title: "S02E02.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         ),
                         PathRef(
                             title: "S02E03.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         )
                     ]
@@ -61,41 +61,51 @@ class HierarchicalListVM: ObservableObject {
                     children: [
                         PathRef(
                             title: "S03E01.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         ),
                         PathRef(
                             title: "S03E02.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         ),
                         PathRef(
                             title: "S03E03.mkv",
-                            icon: "doc.fill",
+                            icon: "video.fill",
                             children: nil
                         )
                     ]
                 ),
                 PathRef(
                     title: "S1-Info.txt",
-                    icon: "doc.fill",
+                    icon: "doc.text.fill",
                     children: nil
                 ),
                 PathRef(
                     title: "S2-Info.txt",
-                    icon: "doc.fill",
+                    icon: "doc.text.fill",
                     children: nil
                 ),
                 PathRef(
                     title: "S3-Info.txt",
-                    icon: "doc.fill",
+                    icon: "doc.text.fill",
                     children: nil
                 )
             ]
         ),
         PathRef(
             title: "README.md",
-            icon: "doc.fill",
+            icon: "chevron.left.forwardslash.chevron.right",
+            children: nil
+        ),
+        PathRef(
+            title: "Screenshots.png",
+            icon: "photo",
+            children: nil
+        ),
+        PathRef(
+            title: "Theme-Music.mp3",
+            icon: "waveform",
             children: nil
         )
     ]
