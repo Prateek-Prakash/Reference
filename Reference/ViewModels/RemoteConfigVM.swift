@@ -17,6 +17,10 @@ class RemoteConfigVM: ObservableObject {
     @Published var didPullConfig = false
     
     func fetchRemoteConfig() async throws {
+        DispatchQueue.main.async {
+            self.didPullConfig = false
+        }
+        
         let rConfig = RemoteConfig.remoteConfig()
         let rSettings = RemoteConfigSettings()
         rSettings.minimumFetchInterval = 0
