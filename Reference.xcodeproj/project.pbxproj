@@ -19,18 +19,6 @@
 		6E5ECA25288DF42200F3C45D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA24288DF42200F3C45D /* Realm */; };
 		6E5ECA27288DF42200F3C45D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA26288DF42200F3C45D /* RealmSwift */; };
 		6E5ECA2A288DF4B200F3C45D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA29288DF4B200F3C45D /* Fakery */; };
-		6E5ECA38288DF9F800F3C45D /* Purple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA2C288DF9F800F3C45D /* Purple@2x.png */; };
-		6E5ECA39288DF9F800F3C45D /* Blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA2D288DF9F800F3C45D /* Blue@2x.png */; };
-		6E5ECA3A288DF9F800F3C45D /* Red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA2E288DF9F800F3C45D /* Red@3x.png */; };
-		6E5ECA3B288DF9F800F3C45D /* Red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA2F288DF9F800F3C45D /* Red@2x.png */; };
-		6E5ECA3C288DF9F800F3C45D /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA30288DF9F800F3C45D /* Black.png */; };
-		6E5ECA3D288DF9F800F3C45D /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA31288DF9F800F3C45D /* Blue.png */; };
-		6E5ECA3E288DF9F800F3C45D /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA32288DF9F800F3C45D /* Purple.png */; };
-		6E5ECA3F288DF9F800F3C45D /* Black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA33288DF9F800F3C45D /* Black@3x.png */; };
-		6E5ECA40288DF9F800F3C45D /* Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA34288DF9F800F3C45D /* Black@2x.png */; };
-		6E5ECA41288DF9F800F3C45D /* Purple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA35288DF9F800F3C45D /* Purple@3x.png */; };
-		6E5ECA42288DF9F800F3C45D /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA36288DF9F800F3C45D /* Red.png */; };
-		6E5ECA43288DF9F800F3C45D /* Blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E5ECA37288DF9F800F3C45D /* Blue@3x.png */; };
 		6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAD59C3288D8CA0004DF069 /* BetterListPicker */; };
 		6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C6288D90A3004DF069 /* AppAppearance.swift */; };
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
@@ -42,15 +30,6 @@
 		6EBE6B2C288D0B9A00719861 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B2A288D0B9900719861 /* LICENSE */; };
 		6EBE6B2D288D0B9A00719861 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6EBE6B2B288D0B9900719861 /* README.md */; };
 		6ED50A87288E04B1008F0E59 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50A86288E04B1008F0E59 /* AppIcon.swift */; };
-		6ED50A91288E165B008F0E59 /* Orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A88288E165B008F0E59 /* Orange@2x.png */; };
-		6ED50A92288E165B008F0E59 /* Mint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A89288E165B008F0E59 /* Mint@2x.png */; };
-		6ED50A93288E165B008F0E59 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A8A288E165B008F0E59 /* Green.png */; };
-		6ED50A94288E165B008F0E59 /* Green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A8B288E165B008F0E59 /* Green@3x.png */; };
-		6ED50A95288E165B008F0E59 /* Mint.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A8C288E165B008F0E59 /* Mint.png */; };
-		6ED50A96288E165B008F0E59 /* Green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A8D288E165B008F0E59 /* Green@2x.png */; };
-		6ED50A97288E165B008F0E59 /* Mint@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A8E288E165B008F0E59 /* Mint@3x.png */; };
-		6ED50A98288E165B008F0E59 /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A8F288E165B008F0E59 /* Orange.png */; };
-		6ED50A99288E165B008F0E59 /* Orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A90288E165B008F0E59 /* Orange@3x.png */; };
 		6ED50A9B288EEBD0008F0E59 /* FakeryDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */; };
 		6ED50A9D288EEC63008F0E59 /* FakeryDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */; };
 		6ED50A9F288F2550008F0E59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */; };
@@ -70,6 +49,7 @@
 		6ED50ABE288F799F008F0E59 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50ABD288F799F008F0E59 /* MapKitView.swift */; };
 		6ED50AC2288FAA26008F0E59 /* HierarchicalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */; };
 		6ED50AC4288FAB3F008F0E59 /* HierarchicalListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */; };
+		6ED50AC628902721008F0E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50AC528902721008F0E59 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,19 +62,6 @@
 		6E5ECA1A288DCDD800F3C45D /* AttributionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionDetails.swift; sourceTree = "<group>"; };
 		6E5ECA1C288DD18B00F3C45D /* AttributionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionDetailsView.swift; sourceTree = "<group>"; };
 		6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionDetailsVM.swift; sourceTree = "<group>"; };
-		6E5ECA2C288DF9F800F3C45D /* Purple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Purple@2x.png"; sourceTree = "<group>"; };
-		6E5ECA2D288DF9F800F3C45D /* Blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue@2x.png"; sourceTree = "<group>"; };
-		6E5ECA2E288DF9F800F3C45D /* Red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red@3x.png"; sourceTree = "<group>"; };
-		6E5ECA2F288DF9F800F3C45D /* Red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red@2x.png"; sourceTree = "<group>"; };
-		6E5ECA30288DF9F800F3C45D /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
-		6E5ECA31288DF9F800F3C45D /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
-		6E5ECA32288DF9F800F3C45D /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Purple.png; sourceTree = "<group>"; };
-		6E5ECA33288DF9F800F3C45D /* Black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black@3x.png"; sourceTree = "<group>"; };
-		6E5ECA34288DF9F800F3C45D /* Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Black@2x.png"; sourceTree = "<group>"; };
-		6E5ECA35288DF9F800F3C45D /* Purple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Purple@3x.png"; sourceTree = "<group>"; };
-		6E5ECA36288DF9F800F3C45D /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
-		6E5ECA37288DF9F800F3C45D /* Blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue@3x.png"; sourceTree = "<group>"; };
-		6E5ECA44288DFC5C00F3C45D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EAD59C6288D90A3004DF069 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		6EAD59C8288D93D1004DF069 /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		6EAD59CC288D967A004DF069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,15 +73,6 @@
 		6EBE6B2A288D0B9900719861 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6EBE6B2B288D0B9900719861 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6ED50A86288E04B1008F0E59 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
-		6ED50A88288E165B008F0E59 /* Orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orange@2x.png"; sourceTree = "<group>"; };
-		6ED50A89288E165B008F0E59 /* Mint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mint@2x.png"; sourceTree = "<group>"; };
-		6ED50A8A288E165B008F0E59 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
-		6ED50A8B288E165B008F0E59 /* Green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@3x.png"; sourceTree = "<group>"; };
-		6ED50A8C288E165B008F0E59 /* Mint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mint.png; sourceTree = "<group>"; };
-		6ED50A8D288E165B008F0E59 /* Green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green@2x.png"; sourceTree = "<group>"; };
-		6ED50A8E288E165B008F0E59 /* Mint@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mint@3x.png"; sourceTree = "<group>"; };
-		6ED50A8F288E165B008F0E59 /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
-		6ED50A90288E165B008F0E59 /* Orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orange@3x.png"; sourceTree = "<group>"; };
 		6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeryDataView.swift; sourceTree = "<group>"; };
 		6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeryDataVM.swift; sourceTree = "<group>"; };
 		6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -125,6 +83,7 @@
 		6ED50ABD288F799F008F0E59 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalListView.swift; sourceTree = "<group>"; };
 		6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalListVM.swift; sourceTree = "<group>"; };
+		6ED50AC528902721008F0E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,34 +116,6 @@
 				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
 			);
 			path = Miscellaneous;
-			sourceTree = "<group>";
-		};
-		6E5ECA2B288DF75E00F3C45D /* AppIcons */ = {
-			isa = PBXGroup;
-			children = (
-				6ED50A8A288E165B008F0E59 /* Green.png */,
-				6ED50A8D288E165B008F0E59 /* Green@2x.png */,
-				6ED50A8B288E165B008F0E59 /* Green@3x.png */,
-				6ED50A8C288E165B008F0E59 /* Mint.png */,
-				6ED50A89288E165B008F0E59 /* Mint@2x.png */,
-				6ED50A8E288E165B008F0E59 /* Mint@3x.png */,
-				6ED50A8F288E165B008F0E59 /* Orange.png */,
-				6ED50A88288E165B008F0E59 /* Orange@2x.png */,
-				6ED50A90288E165B008F0E59 /* Orange@3x.png */,
-				6E5ECA30288DF9F800F3C45D /* Black.png */,
-				6E5ECA34288DF9F800F3C45D /* Black@2x.png */,
-				6E5ECA33288DF9F800F3C45D /* Black@3x.png */,
-				6E5ECA31288DF9F800F3C45D /* Blue.png */,
-				6E5ECA2D288DF9F800F3C45D /* Blue@2x.png */,
-				6E5ECA37288DF9F800F3C45D /* Blue@3x.png */,
-				6E5ECA32288DF9F800F3C45D /* Purple.png */,
-				6E5ECA2C288DF9F800F3C45D /* Purple@2x.png */,
-				6E5ECA35288DF9F800F3C45D /* Purple@3x.png */,
-				6E5ECA36288DF9F800F3C45D /* Red.png */,
-				6E5ECA2F288DF9F800F3C45D /* Red@2x.png */,
-				6E5ECA2E288DF9F800F3C45D /* Red@3x.png */,
-			);
-			path = AppIcons;
 			sourceTree = "<group>";
 		};
 		6EAD59C5288D9094004DF069 /* Models */ = {
@@ -252,9 +183,8 @@
 		6EBE6B1A288D072900719861 /* Reference */ = {
 			isa = PBXGroup;
 			children = (
+				6ED50AC528902721008F0E59 /* Assets.xcassets */,
 				6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */,
-				6E5ECA44288DFC5C00F3C45D /* Info.plist */,
-				6E5ECA2B288DF75E00F3C45D /* AppIcons */,
 				6EAD59CB288D9660004DF069 /* Application */,
 				6EAD59CA288D95AA004DF069 /* Extensions */,
 				6EAD59C5288D9094004DF069 /* Models */,
@@ -360,30 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ED50A92288E165B008F0E59 /* Mint@2x.png in Resources */,
-				6E5ECA39288DF9F800F3C45D /* Blue@2x.png in Resources */,
 				6EBE6B2C288D0B9A00719861 /* LICENSE in Resources */,
-				6E5ECA38288DF9F800F3C45D /* Purple@2x.png in Resources */,
-				6ED50A91288E165B008F0E59 /* Orange@2x.png in Resources */,
-				6ED50A99288E165B008F0E59 /* Orange@3x.png in Resources */,
-				6E5ECA3E288DF9F800F3C45D /* Purple.png in Resources */,
-				6E5ECA40288DF9F800F3C45D /* Black@2x.png in Resources */,
-				6E5ECA43288DF9F800F3C45D /* Blue@3x.png in Resources */,
-				6E5ECA3D288DF9F800F3C45D /* Blue.png in Resources */,
-				6E5ECA3A288DF9F800F3C45D /* Red@3x.png in Resources */,
-				6ED50A96288E165B008F0E59 /* Green@2x.png in Resources */,
-				6ED50A95288E165B008F0E59 /* Mint.png in Resources */,
-				6E5ECA41288DF9F800F3C45D /* Purple@3x.png in Resources */,
-				6ED50A98288E165B008F0E59 /* Orange.png in Resources */,
-				6ED50A94288E165B008F0E59 /* Green@3x.png in Resources */,
-				6E5ECA3C288DF9F800F3C45D /* Black.png in Resources */,
 				6ED50A9F288F2550008F0E59 /* GoogleService-Info.plist in Resources */,
-				6E5ECA3F288DF9F800F3C45D /* Black@3x.png in Resources */,
-				6E5ECA42288DF9F800F3C45D /* Red.png in Resources */,
-				6E5ECA3B288DF9F800F3C45D /* Red@2x.png in Resources */,
 				6EBE6B2D288D0B9A00719861 /* README.md in Resources */,
-				6ED50A93288E165B008F0E59 /* Green.png in Resources */,
-				6ED50A97288E165B008F0E59 /* Mint@3x.png in Resources */,
+				6ED50AC628902721008F0E59 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,14 +453,17 @@
 		6EBE6B27288D072900719861 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-Black AppIcon-Blue AppIcon-Green AppIcon-Mint AppIcon-Orange AppIcon-Purple AppIcon-Red";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Black";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_ASSET_PATHS = Reference/Assets.xcassets;
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reference/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,14 +486,17 @@
 		6EBE6B28288D072900719861 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-Black AppIcon-Blue AppIcon-Green AppIcon-Mint AppIcon-Orange AppIcon-Purple AppIcon-Red";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Black";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_ASSET_PATHS = Reference/Assets.xcassets;
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reference/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

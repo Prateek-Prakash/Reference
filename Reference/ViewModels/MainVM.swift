@@ -10,7 +10,7 @@ import SwiftUI
 class MainVM: ObservableObject {
     @AppStorage("appAppearance") var appAppearance: AppAppearance = .system
     @AppStorage("accentColor") var accentColor: Color = .red
-    @AppStorage("appIcon") var appIcon: AppIcon = .red
+    @AppStorage("appIcon") var appIcon: AppIcon = .black
     
     func setAppIcon(_ appIcon: AppIcon) {
         UIApplication.shared.setAlternateIconName(appIcon.id){ error in

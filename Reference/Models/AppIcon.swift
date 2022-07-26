@@ -9,35 +9,35 @@ import BetterListPicker
 import SwiftUI
 
 enum AppIcon: String, CaseIterable {
-    case red = "Red"
-    case black = "Black"
-    case blue = "Blue"
-    case purple = "Purple"
-    case green = "Green"
-    case mint = "Mint"
-    case orange = "Orange"
+    case black = "AppIcon-Black"
+    case blue = "AppIcon-Blue"
+    case green = "AppIcon-Green"
+    case mint = "AppIcon-Mint"
+    case orange = "AppIcon-Orange"
+    case purple = "AppIcon-Purple"
+    case red = "AppIcon-Red"
     
     var baseColor: Color {
         switch self {
-        case .red:
-            return .red
         case .black:
             return .black
         case .blue:
             return .blue
-        case .purple:
-            return .purple
         case .green:
             return .green
         case .mint:
             return .mint
         case .orange:
             return .orange
+        case .purple:
+            return .purple
+        case .red:
+            return .red
         }
     }
 }
 
 extension AppIcon: BetterListPickerSelectable, Identifiable {
     var id: String { rawValue }
-    var title: String { "\(rawValue) Icon" }
+    var title: String { rawValue }
 }
