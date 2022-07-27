@@ -27,18 +27,18 @@ class VisionVM: ObservableObject {
         request.recognitionLevel = .accurate
         request.recognitionLanguages = ["en"]
         request.customWords = [
-            "Reference",
-            "Cloud",
-            "Firestore",
-            "Realtime",
-            "Updates",
-            "Powerful",
-            "Queries",
-            "And",
-            "Automatic",
-            "Scaling",
-            "Create",
-            "Databse",
+            "REFERENCE",
+            "CLOUD",
+            "FIRESTORE",
+            "REALTIME",
+            "UPDATES",
+            "POWERFUL",
+            "QUERIES",
+            "AND",
+            "AUTOMATIC",
+            "SCALING",
+            "CREATE",
+            "DATABASE",
         ]
         do {
             try handler.perform([request])

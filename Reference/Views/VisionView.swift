@@ -29,35 +29,45 @@ struct VisionView: View {
             .navigationTitle("Vision")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem {
-                    Button {
-                        shouldPresentActionSheet = true
-                    } label: {
-                        Image(systemName: "doc.viewfinder")
+                Menu {
+                    Section {
+                        Button {
+                            shouldPresentActionSheet = true
+                        } label: {
+                            Text("Recognize Text")
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Edit Custom Words")
+                        }
                     }
-                    .actionSheet(isPresented: $shouldPresentActionSheet) { () -> ActionSheet in
-                        ActionSheet(
-                            title: Text("Choose Image Source"),
-                            buttons: [
-                                ActionSheet.Button.default(Text("Camera"), action: {
-                                    self.shouldPresentCameraPicker = true
-                                }),
-                                ActionSheet.Button.default(Text("Library"), action: {
-                                    self.shouldPresentLibraryPicker = true
-                                }),
-                                ActionSheet.Button.cancel()
-                            ]
-                        )
-                    }
-                    .fullScreenCover(isPresented: $shouldPresentCameraPicker) {
-                        ImagePickerView(sourceType: .camera, uiImage: self.$uiImage, isPresented: self.$shouldPresentCameraPicker)
-                            .ignoresSafeArea()
-                    }
-                    .sheet(isPresented: $shouldPresentLibraryPicker) {
-                        ImagePickerView(sourceType: .photoLibrary, uiImage: self.$uiImage, isPresented: self.$shouldPresentLibraryPicker)
-                            .ignoresSafeArea(edges: .bottom)
-                    }
+                } label: {
+                    Image(systemName: "ellipsis.circle")
                 }
+            }
+            .actionSheet(isPresented: $shouldPresentActionSheet) { () -> ActionSheet in
+                ActionSheet(
+                    title: Text("Choose Image Source"),
+                    buttons: [
+                        ActionSheet.Button.default(Text("Camera"), action: {
+                            self.shouldPresentCameraPicker = true
+                        }),
+                        ActionSheet.Button.default(Text("Library"), action: {
+                            self.shouldPresentLibraryPicker = true
+                        }),
+                        ActionSheet.Button.cancel()
+                    ]
+                )
+            }
+            .fullScreenCover(isPresented: $shouldPresentCameraPicker) {
+                ImagePickerView(sourceType: .camera, uiImage: self.$uiImage, isPresented: self.$shouldPresentCameraPicker)
+                    .ignoresSafeArea()
+            }
+            .sheet(isPresented: $shouldPresentLibraryPicker) {
+                ImagePickerView(sourceType: .photoLibrary, uiImage: self.$uiImage, isPresented: self.$shouldPresentLibraryPicker)
+                    .ignoresSafeArea(edges: .bottom)
             }
             .onChange(of: uiImage) { selectedImage in
                 visionVM.recognizeText(in: selectedImage)
