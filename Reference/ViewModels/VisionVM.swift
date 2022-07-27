@@ -25,6 +25,21 @@ class VisionVM: ObservableObject {
             }
         }
         request.recognitionLevel = .accurate
+        request.recognitionLanguages = ["en"]
+        request.customWords = [
+            "Reference",
+            "Cloud",
+            "Firestore",
+            "Realtime",
+            "Updates",
+            "Powerful",
+            "Queries",
+            "And",
+            "Automatic",
+            "Scaling",
+            "Create",
+            "Databse",
+        ]
         do {
             try handler.perform([request])
         } catch let error{
@@ -33,19 +48,30 @@ class VisionVM: ObservableObject {
     }
     
     func recognizeText(from request: VNRequest) -> String? {
+        var debugStrings: [String] = []
         guard let observations = request.results as? [VNRecognizedTextObservation] else {
             return nil
         }
-        for observation in observations {
-            guard let topCandidate = observation.topCandidates(1).first else { return nil }
-            print(topCandidate.string)
-            print(topCandidate.confidence)
-            print(observation.boundingBox)
+        var sorted = observations
+        sorted.sort() {
+            $0.boundingBox.midY > $1.boundingBox.midY
         }
-        let recognizedStrings: [String] = observations.compactMap { observation in
+        for observation in sorted {
             guard let topCandidate = observation.topCandidates(1).first else { return nil }
-            return topCandidate.string.trimmingCharacters(in: .whitespaces)
+            debugStrings.append(topCandidate.string)
+            debugStrings.append("--")
+            debugStrings.append("Confidence: \(topCandidate.confidence.debugDescription)")
+            debugStrings.append("--")
+            debugStrings.append("MinX: \(observation.boundingBox.minX)")
+            debugStrings.append("MidX: \(observation.boundingBox.midX)")
+            debugStrings.append("MaxX: \(observation.boundingBox.maxX)")
+            debugStrings.append("MinY: \(observation.boundingBox.minY)")
+            debugStrings.append("MidY: \(observation.boundingBox.midY)")
+            debugStrings.append("MaxY: \(observation.boundingBox.maxY)")
+            debugStrings.append("Width: \(observation.boundingBox.width)")
+            debugStrings.append("Height: \(observation.boundingBox.height)")
+            debugStrings.append("\n")
         }
-        return recognizedStrings.joined(separator: "\n")
+        return debugStrings.joined(separator: "\n")
     }
 }
