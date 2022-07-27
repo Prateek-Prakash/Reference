@@ -36,6 +36,12 @@ class VisionVM: ObservableObject {
         guard let observations = request.results as? [VNRecognizedTextObservation] else {
             return nil
         }
+        for observation in observations {
+            guard let topCandidate = observation.topCandidates(1).first else { return nil }
+            print(topCandidate.string)
+            print(topCandidate.confidence)
+            print(observation.boundingBox)
+        }
         let recognizedStrings: [String] = observations.compactMap { observation in
             guard let topCandidate = observation.topCandidates(1).first else { return nil }
             return topCandidate.string.trimmingCharacters(in: .whitespaces)
