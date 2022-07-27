@@ -64,6 +64,7 @@ struct MainView: View {
                     Text("Core Data")
                     Text("Realm")
                     Text("SQLite")
+                    Text("Device Storage")
                 }
                 
                 Section("VIDEO PLAYER") {
