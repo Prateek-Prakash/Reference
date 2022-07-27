@@ -36,7 +36,13 @@ struct MainView: View {
                     }
                     Text("SceneKit")
                     Text("StoreKit")
-                    Text("VisionKit")
+                    NavigationLink {
+                        DeferView {
+                            VisionView()
+                        }
+                    } label: {
+                        Text("Vision")
+                    }
                 }
                 
                 Section("GOOGLE FIREBASE") {

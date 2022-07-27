@@ -51,6 +51,9 @@
 		6ED50AC4288FAB3F008F0E59 /* HierarchicalListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */; };
 		6ED50AC628902721008F0E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED50AC528902721008F0E59 /* Assets.xcassets */; };
 		6ED50AC828903C9F008F0E59 /* PathRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC728903C9F008F0E59 /* PathRef.swift */; };
+		6ED50ACA2890CA48008F0E59 /* VisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50AC92890CA48008F0E59 /* VisionView.swift */; };
+		6ED50ACC2890CA86008F0E59 /* VisionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50ACB2890CA86008F0E59 /* VisionVM.swift */; };
+		6ED50ACE2890CE90008F0E59 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED50ACD2890CE90008F0E59 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalListVM.swift; sourceTree = "<group>"; };
 		6ED50AC528902721008F0E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ED50AC728903C9F008F0E59 /* PathRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRef.swift; sourceTree = "<group>"; };
+		6ED50AC92890CA48008F0E59 /* VisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionView.swift; sourceTree = "<group>"; };
+		6ED50ACB2890CA86008F0E59 /* VisionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionVM.swift; sourceTree = "<group>"; };
+		6ED50ACD2890CE90008F0E59 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				6EAD59D0288D9958004DF069 /* MainVM.swift */,
+				6ED50ACB2890CA86008F0E59 /* VisionVM.swift */,
 				6ED50AB5288F3ED4008F0E59 /* RemoteConfigVM.swift */,
 				6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */,
 				6E5ECA14288DC20700F3C45D /* VariousLabelsVM.swift */,
@@ -204,6 +211,8 @@
 				6EAD59C8288D93D1004DF069 /* DeferView.swift */,
 				6EBE6B1D288D072900719861 /* MainView.swift */,
 				6ED50ABD288F799F008F0E59 /* MapKitView.swift */,
+				6ED50AC92890CA48008F0E59 /* VisionView.swift */,
+				6ED50ACD2890CE90008F0E59 /* ImagePickerView.swift */,
 				6ED50AB3288F3E86008F0E59 /* RemoteConfigView.swift */,
 				6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */,
 				6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */,
@@ -311,7 +320,9 @@
 				6EAD59D1288D9958004DF069 /* MainVM.swift in Sources */,
 				6E5ECA13288DBC4100F3C45D /* AttributionListView.swift in Sources */,
 				6ED50AC4288FAB3F008F0E59 /* HierarchicalListVM.swift in Sources */,
+				6ED50ACE2890CE90008F0E59 /* ImagePickerView.swift in Sources */,
 				6E5ECA1F288DD8DD00F3C45D /* AttributionDetailsVM.swift in Sources */,
+				6ED50ACA2890CA48008F0E59 /* VisionView.swift in Sources */,
 				6ED50A9B288EEBD0008F0E59 /* FakeryDataView.swift in Sources */,
 				6ED50A87288E04B1008F0E59 /* AppIcon.swift in Sources */,
 				6ED50AB6288F3ED4008F0E59 /* RemoteConfigVM.swift in Sources */,
@@ -326,6 +337,7 @@
 				6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */,
 				6ED50ABA288F5B99008F0E59 /* JSONArrayConfig.swift in Sources */,
 				6E5ECA17288DC26100F3C45D /* LabelDetails.swift in Sources */,
+				6ED50ACC2890CA86008F0E59 /* VisionVM.swift in Sources */,
 				6EAD59CD288D967A004DF069 /* AppDelegate.swift in Sources */,
 				6E5ECA1B288DCDD800F3C45D /* AttributionDetails.swift in Sources */,
 				6EAD59D3288D9D37004DF069 /* ColorExtension.swift in Sources */,
@@ -468,6 +480,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Vision Features";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Vision Features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -501,6 +515,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Vision Features";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Vision Features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
