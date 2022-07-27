@@ -66,6 +66,11 @@ struct MainView: View {
                     Text("SQLite")
                 }
                 
+                Section("VIDEO PLAYER") {
+                    Text("AVKit")
+                    Text("MobileVLCKit")
+                }
+                
                 Section("MISCELLANEOUS") {
                     NavigationLink {
                         DeferView {
