@@ -1,5 +1,5 @@
 //
-//  VisionKitVM.swift
+//  VisionVM.swift
 //  Reference
 //
 //  Created by Prateek Prakash on 7/26/22.
