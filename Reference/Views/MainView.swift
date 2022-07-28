@@ -5,11 +5,19 @@
 //  Created by Prateek Prakash on 7/24/22.
 //
 
+import AVKit
 import BetterListPicker
 import SwiftUI
 
 struct MainView: View {
     @StateObject var mainVM = MainVM()
+    
+    @State var isAVKitPlayerPresented = false
+    
+    init() {
+        // Picture-In-Picture
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
+    }
     
     var body: some View {
         NavigationView {
@@ -68,8 +76,15 @@ struct MainView: View {
                 }
                 
                 Section("VIDEO PLAYER") {
-                    Text("AVKit")
-                    Text("MobileVLCKit")
+                    Button(action: {
+                        self.isAVKitPlayerPresented = true
+                    }) {
+                        Text("AVKit Player")
+                    }
+                    .fullScreenCover(isPresented: self.$isAVKitPlayerPresented) {
+                        AVKitPlayerView(videoURL: "https://bit.ly/30r65im")
+                    }
+                    Text("VLCKit Player")
                 }
                 
                 Section("MISCELLANEOUS") {

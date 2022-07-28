@@ -22,6 +22,7 @@
 		6E716EDF2892FA430090A88B /* CustomWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EDE2892FA430090A88B /* CustomWordsView.swift */; };
 		6E716EE12893003A0090A88B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EE02893003A0090A88B /* ArrayExtension.swift */; };
 		6E716EE3289304F70090A88B /* TextFieldAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EE2289304F70090A88B /* TextFieldAlertView.swift */; };
+		6E716EE5289341610090A88B /* AVKitPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EE4289341610090A88B /* AVKitPlayerView.swift */; };
 		6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAD59C3288D8CA0004DF069 /* BetterListPicker */; };
 		6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C6288D90A3004DF069 /* AppAppearance.swift */; };
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
@@ -72,6 +73,8 @@
 		6E716EDE2892FA430090A88B /* CustomWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWordsView.swift; sourceTree = "<group>"; };
 		6E716EE02893003A0090A88B /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		6E716EE2289304F70090A88B /* TextFieldAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertView.swift; sourceTree = "<group>"; };
+		6E716EE4289341610090A88B /* AVKitPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVKitPlayerView.swift; sourceTree = "<group>"; };
+		6E716EE6289343DF0090A88B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6EAD59C6288D90A3004DF069 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		6EAD59C8288D93D1004DF069 /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		6EAD59CC288D967A004DF069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				6ED50AC528902721008F0E59 /* Assets.xcassets */,
+				6E716EE6289343DF0090A88B /* Info.plist */,
 				6ED50A9E288F2550008F0E59 /* GoogleService-Info.plist */,
 				6EAD59CB288D9660004DF069 /* Application */,
 				6EAD59CA288D95AA004DF069 /* Extensions */,
@@ -223,6 +227,7 @@
 				6E716EDE2892FA430090A88B /* CustomWordsView.swift */,
 				6E716EE2289304F70090A88B /* TextFieldAlertView.swift */,
 				6ED50AB3288F3E86008F0E59 /* RemoteConfigView.swift */,
+				6E716EE4289341610090A88B /* AVKitPlayerView.swift */,
 				6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */,
 				6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */,
 				6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */,
@@ -344,6 +349,7 @@
 				6E5ECA15288DC20700F3C45D /* VariousLabelsVM.swift in Sources */,
 				6ED50AB4288F3E86008F0E59 /* RemoteConfigView.swift in Sources */,
 				6ED50ABE288F799F008F0E59 /* MapKitView.swift in Sources */,
+				6E716EE5289341610090A88B /* AVKitPlayerView.swift in Sources */,
 				6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */,
 				6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */,
 				6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */,
@@ -491,7 +497,7 @@
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = Reference/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Vision Features";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Vision Features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -526,7 +532,7 @@
 				DEVELOPMENT_TEAM = NZ3JV53WDD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = Reference/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Vision Features";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Vision Features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
