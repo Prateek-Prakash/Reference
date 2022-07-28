@@ -28,7 +28,6 @@ struct CustomWordsView: View {
                     }
                 }
                 .listStyle(.plain)
-                
             }
             .navigationTitle("Custom Words")
             .toolbar {
