@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct VisionView: View {
+    @AppStorage("accentColor") var accentColor: Color = .red
+    
     @StateObject var visionVM = VisionVM()
     
     @State private var uiImage: UIImage? = nil
     @State private var shouldPresentActionSheet = false
     @State private var shouldPresentCameraPicker = false
     @State private var shouldPresentLibraryPicker = false
+    @State private var shouldPresentCustomWords = false
     
     var body: some View {
         VStack {
@@ -38,7 +41,7 @@ struct VisionView: View {
                         }
                         
                         Button {
-                            
+                            shouldPresentCustomWords = true
                         } label: {
                             Text("Edit Custom Words")
                         }
@@ -68,6 +71,10 @@ struct VisionView: View {
             .sheet(isPresented: $shouldPresentLibraryPicker) {
                 ImagePickerView(sourceType: .photoLibrary, uiImage: self.$uiImage, isPresented: self.$shouldPresentLibraryPicker)
                     .ignoresSafeArea(edges: .bottom)
+            }
+            .sheet(isPresented: $shouldPresentCustomWords) {
+                CustomWordsView(customWords: $visionVM.customWords)
+                    .accentColor(accentColor)
             }
             .onChange(of: uiImage) { selectedImage in
                 visionVM.recognizeText(in: selectedImage)

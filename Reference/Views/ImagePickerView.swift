@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ImagePickerView: UIViewControllerRepresentable {
+    @AppStorage("accentColor") var accentColor: Color = .red
+    
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     @Binding var uiImage: UIImage?
@@ -21,6 +23,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
         let pickerController = UIImagePickerController()
         pickerController.sourceType = sourceType
         pickerController.delegate = context.coordinator
+        pickerController.view.tintColor = UIColor(accentColor)
         return pickerController
     }
     

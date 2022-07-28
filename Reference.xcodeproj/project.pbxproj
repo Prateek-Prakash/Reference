@@ -19,6 +19,9 @@
 		6E5ECA25288DF42200F3C45D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA24288DF42200F3C45D /* Realm */; };
 		6E5ECA27288DF42200F3C45D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA26288DF42200F3C45D /* RealmSwift */; };
 		6E5ECA2A288DF4B200F3C45D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 6E5ECA29288DF4B200F3C45D /* Fakery */; };
+		6E716EDF2892FA430090A88B /* CustomWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EDE2892FA430090A88B /* CustomWordsView.swift */; };
+		6E716EE12893003A0090A88B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EE02893003A0090A88B /* ArrayExtension.swift */; };
+		6E716EE3289304F70090A88B /* TextFieldAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EE2289304F70090A88B /* TextFieldAlertView.swift */; };
 		6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAD59C3288D8CA0004DF069 /* BetterListPicker */; };
 		6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C6288D90A3004DF069 /* AppAppearance.swift */; };
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
@@ -66,6 +69,9 @@
 		6E5ECA1A288DCDD800F3C45D /* AttributionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionDetails.swift; sourceTree = "<group>"; };
 		6E5ECA1C288DD18B00F3C45D /* AttributionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionDetailsView.swift; sourceTree = "<group>"; };
 		6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionDetailsVM.swift; sourceTree = "<group>"; };
+		6E716EDE2892FA430090A88B /* CustomWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWordsView.swift; sourceTree = "<group>"; };
+		6E716EE02893003A0090A88B /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		6E716EE2289304F70090A88B /* TextFieldAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertView.swift; sourceTree = "<group>"; };
 		6EAD59C6288D90A3004DF069 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		6EAD59C8288D93D1004DF069 /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		6EAD59CC288D967A004DF069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 		6EAD59CA288D95AA004DF069 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6E716EE02893003A0090A88B /* ArrayExtension.swift */,
 				6EAD59D2288D9D37004DF069 /* ColorExtension.swift */,
 			);
 			path = Extensions;
@@ -213,6 +220,8 @@
 				6ED50ABD288F799F008F0E59 /* MapKitView.swift */,
 				6ED50AC92890CA48008F0E59 /* VisionView.swift */,
 				6ED50ACD2890CE90008F0E59 /* ImagePickerView.swift */,
+				6E716EDE2892FA430090A88B /* CustomWordsView.swift */,
+				6E716EE2289304F70090A88B /* TextFieldAlertView.swift */,
 				6ED50AB3288F3E86008F0E59 /* RemoteConfigView.swift */,
 				6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */,
 				6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */,
@@ -323,9 +332,12 @@
 				6ED50ACE2890CE90008F0E59 /* ImagePickerView.swift in Sources */,
 				6E5ECA1F288DD8DD00F3C45D /* AttributionDetailsVM.swift in Sources */,
 				6ED50ACA2890CA48008F0E59 /* VisionView.swift in Sources */,
+				6E716EDF2892FA430090A88B /* CustomWordsView.swift in Sources */,
 				6ED50A9B288EEBD0008F0E59 /* FakeryDataView.swift in Sources */,
+				6E716EE3289304F70090A88B /* TextFieldAlertView.swift in Sources */,
 				6ED50A87288E04B1008F0E59 /* AppIcon.swift in Sources */,
 				6ED50AB6288F3ED4008F0E59 /* RemoteConfigVM.swift in Sources */,
+				6E716EE12893003A0090A88B /* ArrayExtension.swift in Sources */,
 				6ED50A9D288EEC63008F0E59 /* FakeryDataVM.swift in Sources */,
 				6E5ECA1D288DD18B00F3C45D /* AttributionDetailsView.swift in Sources */,
 				6E5ECA19288DCCFA00F3C45D /* AttributionListVM.swift in Sources */,

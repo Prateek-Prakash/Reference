@@ -9,6 +9,21 @@ import SwiftUI
 import Vision
 
 class VisionVM: ObservableObject {
+    @AppStorage("customWords") var customWords: [String] = [
+        "REFERENCE",
+        "CLOUD",
+        "FIRESTORE",
+        "REALTIME",
+        "UPDATES",
+        "POWERFUL",
+        "QUERIES",
+        "AND",
+        "AUTOMATIC",
+        "SCALING",
+        "CREATE",
+        "DATABASE"
+    ]
+    
     @Published var textObservation: String? = ""
     
     func recognizeText(in uiImage: UIImage?) {
@@ -26,20 +41,7 @@ class VisionVM: ObservableObject {
         }
         request.recognitionLevel = .accurate
         request.recognitionLanguages = ["en"]
-        request.customWords = [
-            "REFERENCE",
-            "CLOUD",
-            "FIRESTORE",
-            "REALTIME",
-            "UPDATES",
-            "POWERFUL",
-            "QUERIES",
-            "AND",
-            "AUTOMATIC",
-            "SCALING",
-            "CREATE",
-            "DATABASE",
-        ]
+        request.customWords = customWords
         do {
             try handler.perform([request])
         } catch let error{
