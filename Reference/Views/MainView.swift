@@ -13,6 +13,7 @@ struct MainView: View {
     @StateObject var mainVM = MainVM()
     
     @State var isAVKitPlayerPresented = false
+    @State var isVLCKitPlayerPresented = false
     
     init() {
         // Picture-In-Picture
@@ -79,12 +80,27 @@ struct MainView: View {
                     Button(action: {
                         self.isAVKitPlayerPresented = true
                     }) {
-                        Text("AVKit Player")
+                        HStack {
+                            Text("AVKit Player")
+                            Spacer()
+                            Image(systemName: "play.fill")
+                        }
                     }
-                    .fullScreenCover(isPresented: self.$isAVKitPlayerPresented) {
+                    .fullScreenCover(isPresented: $isAVKitPlayerPresented) {
                         AVKitPlayerView(videoURL: "https://bit.ly/30r65im")
                     }
-                    Text("VLCKit Player")
+                    Button(action: {
+                        self.isVLCKitPlayerPresented = true
+                    }) {
+                        HStack {
+                            Text("VLCKit Player")
+                            Spacer()
+                            Image(systemName: "play.fill")
+                        }
+                    }
+                    .fullScreenCover(isPresented: $isVLCKitPlayerPresented) {
+                        VLCKitPlayerView(isPresented: $isVLCKitPlayerPresented)
+                    }
                 }
                 
                 Section("MISCELLANEOUS") {
@@ -112,7 +128,11 @@ struct MainView: View {
                     Button {
                         mainVM.generateUUID()
                     } label: {
-                        Text("Generate UUID")
+                        HStack {
+                            Text("Generate UUID")
+                            Spacer()
+                            Image(systemName: "doc.on.doc.fill")
+                        }
                     }
                 }
                 
