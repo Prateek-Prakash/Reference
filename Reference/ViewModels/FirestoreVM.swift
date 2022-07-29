@@ -18,22 +18,22 @@ class FirestoreVM: ObservableObject {
     }
     
     func initContactsListener() {
-            let firestoreDb = Firestore.firestore()
-            firestoreDb.collection("contacts").order(by: "name").addSnapshotListener { snapshot, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    DispatchQueue.main.async {
-                        self.contacts = snapshot?.documents.map {
-                            Contact(
-                                id: $0.documentID,
-                                name: $0["name"] as? String ?? "NIL FIELD",
-                                phone: $0["phone"] as? String ?? "NIL FIELD",
-                                favorite: $0["favorite"] as? Bool ?? false
-                            )
-                        } ?? []
-                    }
+        let firestoreDb = Firestore.firestore()
+        firestoreDb.collection("contacts").order(by: "name").addSnapshotListener { snapshot, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                DispatchQueue.main.async {
+                    self.contacts = snapshot?.documents.map {
+                        Contact(
+                            id: $0.documentID,
+                            name: $0["name"] as? String ?? "NIL FIELD",
+                            phone: $0["phone"] as? String ?? "NIL FIELD",
+                            favorite: $0["favorite"] as? Bool ?? false
+                        )
+                    } ?? []
                 }
             }
         }
+    }
 }
