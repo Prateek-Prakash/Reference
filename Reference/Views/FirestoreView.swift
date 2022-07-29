@@ -9,17 +9,45 @@ import Firebase
 import SwiftUI
 
 struct FirestoreView: View {
+    @StateObject var firestoreVM = FirestoreVM()
+    
     @State var firestoreNetworkAccess = true
     
     var body: some View {
         VStack {
-            List {
-                
+            VStack {
+                if !firestoreVM.contacts.isEmpty {
+                    List(firestoreVM.contacts) { contact in
+                        HStack {
+                            Image(systemName: "star.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(contact.favorite ? Color(.systemGreen) : Color(.systemGray4))
+                                .shadow(color: contact.favorite ? Color(.systemGreen) : Color(.systemGray4), radius: 3)
+                                .shadow(color: contact.favorite ? Color(.systemGreen) : Color(.systemGray4), radius: 3)
+                                .padding(.trailing)
+                            
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text(contact.name)
+                                    .font(.system(size: 15, weight: .bold))
+                                    .foregroundColor(.primary)
+                                Text(contact.phone)
+                                    .font(.system(size: 10, weight: .regular))
+                                    .foregroundColor(.secondary)
+                                Text(contact.id)
+                                    .font(.system(size: 8, weight: .thin))
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                    .listStyle(.plain)
+                } else {
+                    ProgressView()
+                }
             }
             .navigationTitle("Firestore")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         firestoreNetworkAccess.toggle()
                         if firestoreNetworkAccess {
@@ -31,6 +59,13 @@ struct FirestoreView: View {
                         }
                     } label: {
                         Image(systemName: firestoreNetworkAccess ? "antenna.radiowaves.left.and.right" : "antenna.radiowaves.left.and.right.slash")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
                     }
                 }
             }
