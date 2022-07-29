@@ -36,4 +36,20 @@ class FirestoreVM: ObservableObject {
             }
         }
     }
+    
+    func addMockContact() {
+        let contact = Contact.mock()
+        let firestoreDb = Firestore.firestore()
+        firestoreDb.collection("contacts").document(contact.id).setData([
+            "name": contact.name,
+            "phone": contact.phone,
+            "favorite": false
+        ]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Added Contact: \(contact.id)")
+            }
+        }
+    }
 }

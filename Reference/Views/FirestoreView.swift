@@ -65,7 +65,7 @@ struct FirestoreView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        
+                        firestoreVM.addMockContact()
                     } label: {
                         Image(systemName: "plus")
                     }
