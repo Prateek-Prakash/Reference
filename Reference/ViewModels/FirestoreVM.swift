@@ -52,4 +52,19 @@ class FirestoreVM: ObservableObject {
             }
         }
     }
+    
+    func toggleFavoriteContact(id: String) {
+        if let contact = contacts.first(where: { $0.id == id }) {
+            let firestoreDb = Firestore.firestore()
+            firestoreDb.collection("contacts").document(contact.id).updateData([
+                "favorite": !contact.favorite
+            ]) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("Toggled Favoriter: \(contact.id)")
+                }
+            }
+        }
+    }
 }

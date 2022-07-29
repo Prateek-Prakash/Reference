@@ -23,7 +23,7 @@ struct Contact: Identifiable {
         let fPhone = "+1-\(fArea)-\(fExchange)-\(fSubscriber)"
         
         return Contact(
-            id: "-\(UUID().uuidString.replacingOccurrences(of: "-", with: "").lowercased())",
+            id: "\(UUID().uuidString)",
             name: fName,
             phone: fPhone,
             favorite: false

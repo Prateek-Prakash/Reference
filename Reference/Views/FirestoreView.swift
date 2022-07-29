@@ -20,7 +20,7 @@ struct FirestoreView: View {
                     List(firestoreVM.contacts) { contact in
                         HStack {
                             Button {
-                                
+                                firestoreVM.toggleFavoriteContact(id: contact.id)
                             } label: {
                                 Image(systemName: "star.fill")
                                     .font(.system(size: 13))
