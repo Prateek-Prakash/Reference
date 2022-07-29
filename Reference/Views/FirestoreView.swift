@@ -17,27 +17,30 @@ struct FirestoreView: View {
         VStack {
             VStack {
                 if !firestoreVM.contacts.isEmpty {
-                    List(firestoreVM.contacts) { contact in
-                        HStack {
-                            Button {
-                                firestoreVM.toggleFavoriteContact(id: contact.id)
-                            } label: {
-                                Image(systemName: "star.fill")
-                                    .font(.system(size: 13))
-                                    .foregroundColor(contact.favorite ? Color(.systemYellow) : Color(.systemGray4))
-                                    .padding(.trailing)
-                            }
-                            
-                            VStack(alignment: .leading, spacing: 3) {
-                                Text(contact.name)
-                                    .font(.system(size: 15, weight: .bold))
-                                    .foregroundColor(.primary)
-                                Text(contact.phone)
-                                    .font(.system(size: 13, weight: .regular))
-                                    .foregroundColor(.secondary)
-                                Text(contact.id)
-                                    .font(.system(size: 10, weight: .thin))
-                                    .foregroundColor(.secondary)
+                    List {
+                        ForEach(firestoreVM.contacts) { contact in
+                            HStack {
+                                Button {
+                                    firestoreVM.toggleFavoriteContact(id: contact.id)
+                                } label: {
+                                    Image(systemName: "star.fill")
+                                        .font(.system(size: 13))
+                                        .foregroundColor(contact.favorite ? Color(.systemYellow) : Color(.systemGray4))
+                                        .shadow(color: contact.favorite ? Color(.systemYellow) : Color(.systemGray4), radius: 5)
+                                        .padding(.trailing)
+                                }
+                                
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text(contact.name)
+                                        .font(.system(size: 15, weight: .bold))
+                                        .foregroundColor(.primary)
+                                    Text(contact.phone)
+                                        .font(.system(size: 13, weight: .regular))
+                                        .foregroundColor(.secondary)
+                                    Text(contact.id)
+                                        .font(.system(size: 10, weight: .thin))
+                                        .foregroundColor(.secondary)
+                                }
                             }
                         }
                     }
