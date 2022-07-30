@@ -45,13 +45,17 @@ struct MainView: View {
                     }
                     Text("SceneKit")
                     Text("StoreKit")
+                }
+                
+                Section("VISION • CORE ML") {
                     NavigationLink {
                         DeferView {
-                            VisionView()
+                            TextRecognitionView()
                         }
                     } label: {
-                        Text("Vision")
+                        Text("Text Recognition")
                     }
+                    Text("Object Detection")
                 }
                 
                 Section("GOOGLE FIREBASE") {

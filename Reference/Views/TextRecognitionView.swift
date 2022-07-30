@@ -1,5 +1,5 @@
 //
-//  VisionView.swift
+//  TextRecognitionView.swift
 //  Reference
 //
 //  Created by Prateek Prakash on 7/26/22.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct VisionView: View {
+struct TextRecognitionView: View {
     @AppStorage("accentColor") var accentColor: Color = .red
     
-    @StateObject var visionVM = VisionVM()
+    @StateObject var textRecognitionVM = TextRecognitionVM()
     
     @State private var uiImage: UIImage? = nil
     @State private var shouldPresentActionSheet = false
@@ -21,7 +21,7 @@ struct VisionView: View {
     var body: some View {
         VStack {
             ScrollView {
-                if let textObservation = visionVM.textObservation {
+                if let textObservation = textRecognitionVM.textObservation {
                     Text(textObservation)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .padding()
@@ -29,7 +29,7 @@ struct VisionView: View {
                         .foregroundColor(.secondary)
                 }
             }
-            .navigationTitle("Vision")
+            .navigationTitle("Text Recognition")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Menu {
@@ -73,11 +73,11 @@ struct VisionView: View {
                     .ignoresSafeArea(edges: .bottom)
             }
             .sheet(isPresented: $shouldPresentCustomWords) {
-                CustomWordsView(customWords: $visionVM.customWords)
+                CustomWordsView(customWords: $textRecognitionVM.customWords)
                     .accentColor(accentColor)
             }
             .onChange(of: uiImage) { selectedImage in
-                visionVM.recognizeText(in: selectedImage)
+                textRecognitionVM.recognizeText(in: selectedImage)
             }
         }
     }

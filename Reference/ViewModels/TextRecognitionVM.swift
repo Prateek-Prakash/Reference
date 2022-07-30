@@ -1,5 +1,5 @@
 //
-//  VisionVM.swift
+//  TextRecognitionVM.swift
 //  Reference
 //
 //  Created by Prateek Prakash on 7/26/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Vision
 
-class VisionVM: ObservableObject {
+class TextRecognitionVM: ObservableObject {
     @AppStorage("customWords") var customWords: [String] = [
         "REFERENCE",
         "CLOUD",

@@ -15,6 +15,11 @@ class AttributionListVM: ObservableObject {
             licenseUrl: "https://raw.githubusercontent.com/Jinya/BetterListPicker/main/LICENSE"
         ),
         AttributionDetails(
+            name: "Darknet",
+            homeUrl: "https://github.com/pjreddie/darknet",
+            licenseUrl: "https://raw.githubusercontent.com/pjreddie/darknet/master/LICENSE.mit"
+        ),
+        AttributionDetails(
             name: "Fakery",
             homeUrl: "https://raw.githubusercontent.com/vadymmarkov/Fakery",
             licenseUrl: "https://raw.githubusercontent.com/vadymmarkov/Fakery/master/LICENSE.md"
