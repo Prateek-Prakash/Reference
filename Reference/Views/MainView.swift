@@ -94,9 +94,9 @@ struct MainView: View {
                 }
                 
                 Section("VIDEO PLAYER") {
-                    Button(action: {
+                    Button {
                         self.isAVKitPlayerPresented = true
-                    }) {
+                    } label: {
                         HStack {
                             Text("AVKit Player")
                             Spacer()
@@ -106,9 +106,9 @@ struct MainView: View {
                     .fullScreenCover(isPresented: $isAVKitPlayerPresented) {
                         AVKitPlayerView(videoURL: "https://bit.ly/30r65im")
                     }
-                    Button(action: {
+                    Button {
                         self.isVLCKitPlayerPresented = true
-                    }) {
+                    } label: {
                         HStack {
                             Text("VLCKit Player")
                             Spacer()
