@@ -30,7 +30,6 @@ struct AuthenticationView: View {
                         } label: {
                             Text("REGISTER")
                                 .frame(maxWidth: .infinity)
-                                .padding()
                         }
                         .buttonStyle(.bordered)
                         .tint(authenticationVM.accentColor)
@@ -45,7 +44,6 @@ struct AuthenticationView: View {
                         } label: {
                             Text("LOGIN")
                                 .frame(maxWidth: .infinity)
-                                .padding()
                         }
                         .buttonStyle(.bordered)
                         .tint(authenticationVM.accentColor)
