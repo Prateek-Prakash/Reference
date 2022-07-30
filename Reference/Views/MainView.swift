@@ -68,7 +68,13 @@ struct MainView: View {
                 
                 Section("GOOGLE FIREBASE") {
                     Text("AdMob")
-                    Text("Authentication")
+                    NavigationLink {
+                        DeferView {
+                            AuthenticationView()
+                        }
+                    } label: {
+                        Text("Authentication")
+                    }
                     NavigationLink {
                         DeferView {
                             FirestoreView()
