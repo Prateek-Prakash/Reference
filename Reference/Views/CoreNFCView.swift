@@ -12,17 +12,43 @@ struct CoreNFCView: View {
     
     var body: some View {
         VStack {
-            List {
+            VStack {
                 Button {
                     nfcHelper.scan(mode: .read)
                 } label: {
-                    Text("Read NFC Tag")
+                    HStack {
+                        Image(systemName: "wave.3.right.circle.fill")
+                            .font(.system(size: 25))
+                        Text("READ NFC TAG")
+                            .font(.system(size: 20, weight: .heavy, design: .rounded))
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.roundedRectangle(radius: 8))
+                .padding(.horizontal)
+                .padding(.top)
+                
+                Divider()
+                    .padding()
+                
                 Button {
                     nfcHelper.scan(mode: .write, text: UUID().uuidString)
                 } label: {
-                    Text("Write NFC Tag")
+                    HStack {
+                        Image(systemName: "wave.3.right.circle.fill")
+                            .font(.system(size: 25))
+                        Text("WRITE NFC TAG")
+                            .font(.system(size: 20, weight: .heavy, design: .rounded))
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.roundedRectangle(radius: 8))
+                .padding(.horizontal)
+                .padding(.bottom)
             }
             .navigationTitle("Core NFC")
             .navigationBarTitleDisplayMode(.inline)
