@@ -56,6 +56,7 @@ struct MainView: View {
                         Text("Text Recognition")
                     }
                     Text("Object Detection")
+                    Text("Pose Estimation")
                 }
                 
                 Section("GOOGLE FIREBASE") {

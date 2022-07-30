@@ -28,6 +28,9 @@
 		6E716EEE28935CA60090A88B /* FirestoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EED28935CA60090A88B /* FirestoreVM.swift */; };
 		6E716EF028935D670090A88B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EEF28935D670090A88B /* Contact.swift */; };
 		6E716EF3289366CA0090A88B /* AppCheckFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EF2289366CA0090A88B /* AppCheckFactory.swift */; };
+		6E716EFB2895BC8F0090A88B /* NFCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFA2895BC8F0090A88B /* NFCHelper.swift */; };
+		6E716EFF2895BF450090A88B /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFD2895BF450090A88B /* YOLOv3.mlmodel */; };
+		6E716F002895BF450090A88B /* PoseNet100S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFE2895BF450090A88B /* PoseNet100S16FP16.mlmodel */; };
 		6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAD59C3288D8CA0004DF069 /* BetterListPicker */; };
 		6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C6288D90A3004DF069 /* AppAppearance.swift */; };
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
@@ -86,6 +89,9 @@
 		6E716EEF28935D670090A88B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		6E716EF12893667F0090A88B /* Reference.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reference.entitlements; sourceTree = "<group>"; };
 		6E716EF2289366CA0090A88B /* AppCheckFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckFactory.swift; sourceTree = "<group>"; };
+		6E716EFA2895BC8F0090A88B /* NFCHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCHelper.swift; sourceTree = "<group>"; };
+		6E716EFD2895BF450090A88B /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3.mlmodel; sourceTree = "<group>"; };
+		6E716EFE2895BF450090A88B /* PoseNet100S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNet100S16FP16.mlmodel; sourceTree = "<group>"; };
 		6EAD59C6288D90A3004DF069 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		6EAD59C8288D93D1004DF069 /* DeferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferView.swift; sourceTree = "<group>"; };
 		6EAD59CC288D967A004DF069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +149,18 @@
 			children = (
 				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
 				6E716EF2289366CA0090A88B /* AppCheckFactory.swift */,
+				6E716EFA2895BC8F0090A88B /* NFCHelper.swift */,
 			);
 			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		6E716EFC2895BF1D0090A88B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E716EFE2895BF450090A88B /* PoseNet100S16FP16.mlmodel */,
+				6E716EFD2895BF450090A88B /* YOLOv3.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6EAD59C5288D9094004DF069 /* Models */ = {
@@ -227,6 +243,7 @@
 				6EBE6B29288D07E200719861 /* Views */,
 				6EAD59CF288D96D7004DF069 /* ViewModels */,
 				6E5ECA0D288DB6CC00F3C45D /* Miscellaneous */,
+				6E716EFC2895BF1D0090A88B /* Resources */,
 			);
 			path = Reference;
 			sourceTree = "<group>";
@@ -354,12 +371,14 @@
 				6ED50ACE2890CE90008F0E59 /* ImagePickerView.swift in Sources */,
 				6E5ECA1F288DD8DD00F3C45D /* AttributionDetailsVM.swift in Sources */,
 				6ED50ACA2890CA48008F0E59 /* TextRecognitionView.swift in Sources */,
+				6E716F002895BF450090A88B /* PoseNet100S16FP16.mlmodel in Sources */,
 				6E716EDF2892FA430090A88B /* CustomWordsView.swift in Sources */,
 				6E716EEE28935CA60090A88B /* FirestoreVM.swift in Sources */,
 				6ED50A9B288EEBD0008F0E59 /* FakeryDataView.swift in Sources */,
 				6E716EE3289304F70090A88B /* TextFieldAlertView.swift in Sources */,
 				6ED50A87288E04B1008F0E59 /* AppIcon.swift in Sources */,
 				6ED50AB6288F3ED4008F0E59 /* RemoteConfigVM.swift in Sources */,
+				6E716EFF2895BF450090A88B /* YOLOv3.mlmodel in Sources */,
 				6E716EE12893003A0090A88B /* ArrayExtension.swift in Sources */,
 				6ED50A9D288EEC63008F0E59 /* FakeryDataVM.swift in Sources */,
 				6E5ECA1D288DD18B00F3C45D /* AttributionDetailsView.swift in Sources */,
@@ -372,6 +391,7 @@
 				6E716EE5289341610090A88B /* AVKitPlayerView.swift in Sources */,
 				6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */,
 				6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */,
+				6E716EFB2895BC8F0090A88B /* NFCHelper.swift in Sources */,
 				6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */,
 				6ED50ABA288F5B99008F0E59 /* JSONArrayConfig.swift in Sources */,
 				6E716EF3289366CA0090A88B /* AppCheckFactory.swift in Sources */,

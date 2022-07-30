@@ -33,6 +33,11 @@ class AttributionListVM: ObservableObject {
             name: "Realm-Swift",
             homeUrl: "https://raw.githubusercontent.com/realm/realm-swift",
             licenseUrl: "https://raw.githubusercontent.com/realm/realm-swift/master/LICENSE"
+        ),
+        AttributionDetails(
+            name: "TFJS-Models",
+            homeUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models",
+            licenseUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/LICENSE"
         )
     ]
 }
