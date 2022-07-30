@@ -43,6 +43,12 @@ struct FirestoreView: View {
                                 }
                             }
                         }
+                        .onDelete { indexSet in
+                            if let index = indexSet.first {
+                                let id = firestoreVM.contacts[index].id
+                                firestoreVM.deleteContact(id: id)
+                            }
+                        }
                     }
                     .listStyle(.plain)
                 } else {

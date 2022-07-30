@@ -11,15 +11,21 @@ import SwiftUI
 class FirestoreVM: ObservableObject {
     @Published var contacts: [Contact] = []
     
+    private var contactsListener: ListenerRegistration?
+    
     init() {
         Task {
             initContactsListener()
         }
     }
     
+    deinit {
+        contactsListener?.remove()
+    }
+    
     func initContactsListener() {
         let firestoreDb = Firestore.firestore()
-        firestoreDb.collection("contacts").order(by: "name").addSnapshotListener { snapshot, error in
+        contactsListener = firestoreDb.collection("contacts").order(by: "name").addSnapshotListener { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -62,7 +68,20 @@ class FirestoreVM: ObservableObject {
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
-                    print("Toggled Favoriter: \(contact.id)")
+                    print("Toggled Favorite: \(contact.id)")
+                }
+            }
+        }
+    }
+    
+    func deleteContact(id: String) {
+        if let contact = contacts.first(where: { $0.id == id }) {
+            let firestoreDb = Firestore.firestore()
+            firestoreDb.collection("contacts").document(contact.id).delete() { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("Deleted Contact: \(contact.id)")
                 }
             }
         }
