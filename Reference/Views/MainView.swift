@@ -34,7 +34,13 @@ struct MainView: View {
                 
                 Section("APPLE TECHNOLOGIES") {
                     Text("ARKit")
-                    Text("Core NFC")
+                    NavigationLink {
+                        DeferView {
+                            CoreNFCView()
+                        }
+                    } label: {
+                        Text("Core NFC")
+                    }
                     Text("CloudKit")
                     NavigationLink {
                         DeferView {
