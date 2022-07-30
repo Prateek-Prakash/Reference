@@ -26,7 +26,7 @@ struct CoreNFCView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.roundedRectangle(radius: 8))
+                .buttonBorderShape(.roundedRectangle(radius: 10))
                 .padding(.horizontal)
                 .padding(.top)
                 
@@ -46,7 +46,7 @@ struct CoreNFCView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.roundedRectangle(radius: 8))
+                .buttonBorderShape(.roundedRectangle(radius: 10))
                 .padding(.horizontal)
                 .padding(.bottom)
             }
