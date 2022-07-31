@@ -128,6 +128,7 @@ struct MainView: View {
                 }
                 
                 Section("MISCELLANEOUS") {
+                    Text("Search Filter")
                     NavigationLink {
                         DeferView {
                             HierarchicalListView()
