@@ -52,7 +52,17 @@ struct FirestoreView: View {
                     }
                     .listStyle(.plain)
                 } else {
-                    ProgressView()
+                    if firestoreVM.loginStatus {
+                        if firestoreVM.loaded {
+                            Text("--••• NO CONTACTS •••--")
+                                .foregroundColor(.secondary)
+                        } else {
+                            ProgressView()
+                        }
+                    } else {
+                        Text("--••• PLEASE LOGIN •••--")
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
             .navigationTitle("Firestore")
@@ -78,6 +88,7 @@ struct FirestoreView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .disabled(!firestoreVM.loginStatus)
                 }
             }
         }

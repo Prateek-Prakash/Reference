@@ -209,6 +209,7 @@
 			children = (
 				6EAD59D0288D9958004DF069 /* MainVM.swift */,
 				6ED50ACB2890CA86008F0E59 /* TextRecognitionVM.swift */,
+				6E721EF72895EC3500FE3A1C /* AuthenticationVM.swift */,
 				6E716EED28935CA60090A88B /* FirestoreVM.swift */,
 				6ED50AB5288F3ED4008F0E59 /* RemoteConfigVM.swift */,
 				6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */,
@@ -216,7 +217,6 @@
 				6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */,
 				6E5ECA18288DCCFA00F3C45D /* AttributionListVM.swift */,
 				6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */,
-				6E721EF72895EC3500FE3A1C /* AuthenticationVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

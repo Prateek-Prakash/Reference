@@ -10,8 +10,8 @@ import SwiftUI
 import ToastUI
 
 enum AuthenticationMode: String, CaseIterable {
-    case register = "Register"
     case login = "Login"
+    case register = "Register"
 }
 
 enum AuthenticationResult: String {
@@ -21,17 +21,17 @@ enum AuthenticationResult: String {
 
 class AuthenticationVM: ObservableObject {
     @AppStorage("accentColor") var accentColor: Color = .red
+    @AppStorage("loginStatus") var loginStatus = false
+    @AppStorage("loginEmail") var loginEmail: String = ""
+    @AppStorage("loginPassword") var loginPassword: String = ""
     
-    @Published var authenticationMode: AuthenticationMode = .register
+    @Published var authenticationMode: AuthenticationMode = .login
     
     @Published var registerEmail: String = ""
     @Published var registerPassword: String = ""
     @Published var registerToastShowing = false
     @Published var registerToastResult: AuthenticationResult = .success
     
-    @Published var loginStatus = false
-    @Published var loginEmail: String = ""
-    @Published var loginPassword: String = ""
     @Published var loginToastShowing = false
     @Published var loginToastResult: AuthenticationResult = .success
     
@@ -67,8 +67,6 @@ class AuthenticationVM: ObservableObject {
             
             if result?.user != nil {
                 self.loginStatus = true
-                self.loginEmail = ""
-                self.loginPassword = ""
                 self.loginToastResult = .success
                 self.loginToastShowing = true
             }

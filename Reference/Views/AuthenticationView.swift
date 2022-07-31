@@ -21,23 +21,9 @@ struct AuthenticationView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                .padding(.bottom)
                 
-                if authenticationVM.authenticationMode == .register {
-                    VStack {
-                        TextField("Email", text: $authenticationVM.registerEmail)
-                        SecureField("Password", text: $authenticationVM.registerPassword)
-                        Button {
-                            authenticationVM.register()
-                        } label: {
-                            Text("REGISTER")
-                                .frame(maxWidth: .infinity)
-                        }
-                        .buttonStyle(.bordered)
-                        .tint(authenticationVM.accentColor)
-                        .clipShape(Capsule())
-                    }
-                    .textFieldStyle(.roundedBorder)
-                } else if authenticationVM.authenticationMode == .login {
+                if authenticationVM.authenticationMode == .login {
                     if authenticationVM.loginStatus {
                         VStack {
                             Button {
@@ -45,27 +31,41 @@ struct AuthenticationView: View {
                             } label: {
                                 Text("LOGOUT")
                                     .frame(maxWidth: .infinity)
+                                    .padding()
                             }
-                            .buttonStyle(.bordered)
-                            .tint(.red)
-                            .clipShape(Capsule())
+                            .background(.regularMaterial, in: Capsule())
                         }
                     } else {
                         VStack {
                             TextField("Email", text: $authenticationVM.loginEmail)
                             SecureField("Password", text: $authenticationVM.loginPassword)
+                                .padding(.bottom)
                             Button {
                                 authenticationVM.login()
                             } label: {
                                 Text("LOGIN")
                                     .frame(maxWidth: .infinity)
+                                    .padding()
                             }
-                            .buttonStyle(.bordered)
-                            .tint(authenticationVM.accentColor)
-                            .clipShape(Capsule())
+                            .background(.regularMaterial, in: Capsule())
                         }
                         .textFieldStyle(.roundedBorder)
                     }
+                } else if authenticationVM.authenticationMode == .register {
+                    VStack {
+                        TextField("Email", text: $authenticationVM.registerEmail)
+                        SecureField("Password", text: $authenticationVM.registerPassword)
+                            .padding(.bottom)
+                        Button {
+                            authenticationVM.register()
+                        } label: {
+                            Text("REGISTER")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                        }
+                        .background(.regularMaterial, in: Capsule())
+                    }
+                    .textFieldStyle(.roundedBorder)
                 }
                 
                 Spacer()
@@ -73,15 +73,6 @@ struct AuthenticationView: View {
             .padding()
             .navigationTitle("Authentication")
             .navigationBarTitleDisplayMode(.inline)
-            .toast(isPresented: $authenticationVM.registerToastShowing, dismissAfter: 2) {
-                if authenticationVM.registerToastResult == .success {
-                    ToastView("Registration \(authenticationVM.registerToastResult.rawValue)")
-                        .toastViewStyle(.success)
-                } else {
-                    ToastView("Registration \(authenticationVM.registerToastResult.rawValue)")
-                        .toastViewStyle(.failure)
-                }
-            }
             .toast(isPresented: $authenticationVM.loginToastShowing, dismissAfter: 2) {
                 if authenticationVM.loginToastResult == .success {
                     ToastView("Login \(authenticationVM.loginToastResult.rawValue)")
@@ -97,6 +88,15 @@ struct AuthenticationView: View {
                         .toastViewStyle(.success)
                 } else {
                     ToastView("Logout \(authenticationVM.loginToastResult.rawValue)")
+                        .toastViewStyle(.failure)
+                }
+            }
+            .toast(isPresented: $authenticationVM.registerToastShowing, dismissAfter: 2) {
+                if authenticationVM.registerToastResult == .success {
+                    ToastView("Registration \(authenticationVM.registerToastResult.rawValue)")
+                        .toastViewStyle(.success)
+                } else {
+                    ToastView("Registration \(authenticationVM.registerToastResult.rawValue)")
                         .toastViewStyle(.failure)
                 }
             }
