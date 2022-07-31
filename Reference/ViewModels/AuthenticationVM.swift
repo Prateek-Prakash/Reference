@@ -35,6 +35,9 @@ class AuthenticationVM: ObservableObject {
     @Published var loginToastShowing = false
     @Published var loginToastResult: AuthenticationResult = .success
     
+    @Published var logoutToastShowing = false
+    @Published var logoutToastResult: AuthenticationResult = .success
+    
     func register() {
         Auth.auth().createUser(withEmail: registerEmail, password: registerPassword) { result, error in
             if let error = error {
@@ -69,6 +72,21 @@ class AuthenticationVM: ObservableObject {
                 self.loginToastResult = .success
                 self.loginToastShowing = true
             }
+        }
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            loginStatus = false
+            loginEmail = ""
+            loginPassword = ""
+            self.logoutToastResult = .success
+            self.logoutToastShowing = true
+        } catch let error {
+            print(error.localizedDescription)
+            self.logoutToastResult = .failure
+            self.logoutToastShowing = true
         }
     }
 }

@@ -38,20 +38,34 @@ struct AuthenticationView: View {
                     }
                     .textFieldStyle(.roundedBorder)
                 } else if authenticationVM.authenticationMode == .login {
-                    VStack {
-                        TextField("Email", text: $authenticationVM.loginEmail)
-                        SecureField("Password", text: $authenticationVM.loginPassword)
-                        Button {
-                            authenticationVM.login()
-                        } label: {
-                            Text("LOGIN")
-                                .frame(maxWidth: .infinity)
+                    if authenticationVM.loginStatus {
+                        VStack {
+                            Button {
+                                authenticationVM.logout()
+                            } label: {
+                                Text("LOGOUT")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .tint(.red)
+                            .clipShape(Capsule())
                         }
-                        .buttonStyle(.bordered)
-                        .tint(authenticationVM.accentColor)
-                        .clipShape(Capsule())
+                    } else {
+                        VStack {
+                            TextField("Email", text: $authenticationVM.loginEmail)
+                            SecureField("Password", text: $authenticationVM.loginPassword)
+                            Button {
+                                authenticationVM.login()
+                            } label: {
+                                Text("LOGIN")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .tint(authenticationVM.accentColor)
+                            .clipShape(Capsule())
+                        }
+                        .textFieldStyle(.roundedBorder)
                     }
-                    .textFieldStyle(.roundedBorder)
                 }
                 
                 Spacer()
@@ -74,6 +88,15 @@ struct AuthenticationView: View {
                         .toastViewStyle(.success)
                 } else {
                     ToastView("Login \(authenticationVM.loginToastResult.rawValue)")
+                        .toastViewStyle(.failure)
+                }
+            }
+            .toast(isPresented: $authenticationVM.logoutToastShowing, dismissAfter: 2) {
+                if authenticationVM.logoutToastResult == .success {
+                    ToastView("Logout \(authenticationVM.loginToastResult.rawValue)")
+                        .toastViewStyle(.success)
+                } else {
+                    ToastView("Logout \(authenticationVM.loginToastResult.rawValue)")
                         .toastViewStyle(.failure)
                 }
             }
