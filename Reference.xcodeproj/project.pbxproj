@@ -34,6 +34,7 @@
 		6E716F022895CB480090A88B /* CoreNFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716F012895CB480090A88B /* CoreNFCView.swift */; };
 		6E721EF62895EBF200FE3A1C /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E721EF52895EBF200FE3A1C /* AuthenticationView.swift */; };
 		6E721EF82895EC3500FE3A1C /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E721EF72895EC3500FE3A1C /* AuthenticationVM.swift */; };
+		6E721EFB289604BE00FE3A1C /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6E721EFA289604BE00FE3A1C /* ToastUI */; };
 		6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6EAD59C3288D8CA0004DF069 /* BetterListPicker */; };
 		6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C6288D90A3004DF069 /* AppAppearance.swift */; };
 		6EAD59C9288D93D1004DF069 /* DeferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD59C8288D93D1004DF069 /* DeferView.swift */; };
@@ -137,6 +138,7 @@
 				6E5ECA27288DF42200F3C45D /* RealmSwift in Frameworks */,
 				6E5ECA25288DF42200F3C45D /* Realm in Frameworks */,
 				6ED50AA6288F29FE008F0E59 /* FirebaseAppCheck in Frameworks */,
+				6E721EFB289604BE00FE3A1C /* ToastUI in Frameworks */,
 				6ED50AAC288F29FE008F0E59 /* FirebaseFirestoreSwift in Frameworks */,
 				6ED50AAA288F29FE008F0E59 /* FirebaseFirestore in Frameworks */,
 				6ED50AB2288F29FE008F0E59 /* FirebaseStorage in Frameworks */,
@@ -310,6 +312,7 @@
 				6ED50AAD288F29FE008F0E59 /* FirebaseRemoteConfig */,
 				6ED50AAF288F29FE008F0E59 /* FirebaseRemoteConfigSwift */,
 				6ED50AB1288F29FE008F0E59 /* FirebaseStorage */,
+				6E721EFA289604BE00FE3A1C /* ToastUI */,
 			);
 			productName = Reference;
 			productReference = 6EBE6B18288D072900719861 /* Reference.app */;
@@ -344,6 +347,7 @@
 				6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */,
 				6E5ECA28288DF4B200F3C45D /* XCRemoteSwiftPackageReference "Fakery" */,
 				6ED50AA0288F29FE008F0E59 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6E721EF9289604BE00FE3A1C /* XCRemoteSwiftPackageReference "ToastUI" */,
 			);
 			productRefGroup = 6EBE6B19288D072900719861 /* Products */;
 			projectDirPath = "";
@@ -648,6 +652,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		6E721EF9289604BE00FE3A1C /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		6EAD59C2288D8CA0004DF069 /* XCRemoteSwiftPackageReference "BetterListPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jinya/BetterListPicker.git";
@@ -681,6 +693,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6E5ECA28288DF4B200F3C45D /* XCRemoteSwiftPackageReference "Fakery" */;
 			productName = Fakery;
+		};
+		6E721EFA289604BE00FE3A1C /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E721EF9289604BE00FE3A1C /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
 		};
 		6EAD59C3288D8CA0004DF069 /* BetterListPicker */ = {
 			isa = XCSwiftPackageProductDependency;

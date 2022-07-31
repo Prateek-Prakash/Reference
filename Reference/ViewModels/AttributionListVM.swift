@@ -38,6 +38,10 @@ class AttributionListVM: ObservableObject {
             name: "TFJS-Models",
             homeUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models",
             licenseUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/LICENSE"
-        )
+        ),
+        AttributionDetails(
+            name: "ToastUI",
+            homeUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI",
+            licenseUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI/main/LICENSE")
     ]
 }
