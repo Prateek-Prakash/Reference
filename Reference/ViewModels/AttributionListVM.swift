@@ -35,6 +35,11 @@ class AttributionListVM: ObservableObject {
             licenseUrl: "https://raw.githubusercontent.com/realm/realm-swift/master/LICENSE"
         ),
         AttributionDetails(
+            name: "SwiftUI-CachedAsyncImage",
+            homeUrl: "https://raw.githubusercontent.com/lorenzofiamingo/swiftui-cached-async-image",
+            licenseUrl: "https://raw.githubusercontent.com/lorenzofiamingo/swiftui-cached-async-image/main/LICENSE.md"
+        ),
+        AttributionDetails(
             name: "TFJS-Models",
             homeUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models",
             licenseUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/LICENSE"
@@ -42,6 +47,7 @@ class AttributionListVM: ObservableObject {
         AttributionDetails(
             name: "ToastUI",
             homeUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI",
-            licenseUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI/main/LICENSE")
+            licenseUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI/main/LICENSE"
+        )
     ]
 }

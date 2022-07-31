@@ -81,7 +81,7 @@ class AuthenticationVM: ObservableObject {
             loginPassword = ""
             self.logoutToastResult = .success
             self.logoutToastShowing = true
-        } catch let error {
+        } catch {
             print(error.localizedDescription)
             self.logoutToastResult = .failure
             self.logoutToastShowing = true

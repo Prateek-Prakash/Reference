@@ -47,7 +47,7 @@ class RemoteConfigVM: ObservableObject {
                 DispatchQueue.main.async {
                     do {
                         self.jsonConfig = try JSONDecoder().decode(JSONObjectConfig.self, from: dataVal)
-                    } catch let error {
+                    } catch {
                         print(error.localizedDescription)
                     }
                 }
@@ -59,7 +59,7 @@ class RemoteConfigVM: ObservableObject {
                 print("Error Activating RemoteConfig")
                 return
             }
-        } catch let error {
+        } catch {
             print(error.localizedDescription)
         }
     }

@@ -49,6 +49,13 @@ struct MainView: View {
                     } label: {
                         Text("MapKit")
                     }
+                    NavigationLink {
+                        DeferView {
+                            MusicKitView()
+                        }
+                    } label: {
+                        Text("MusicKit")
+                    }
                     Text("RealityKit")
                     Text("SceneKit")
                     Text("StoreKit")
@@ -128,7 +135,6 @@ struct MainView: View {
                 }
                 
                 Section("MISCELLANEOUS") {
-                    Text("Search Filter")
                     NavigationLink {
                         DeferView {
                             HierarchicalListView()

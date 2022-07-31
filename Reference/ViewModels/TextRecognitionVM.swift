@@ -44,7 +44,7 @@ class TextRecognitionVM: ObservableObject {
         request.customWords = customWords
         do {
             try handler.perform([request])
-        } catch let error{
+        } catch {
             print(error.localizedDescription)
         }
     }
