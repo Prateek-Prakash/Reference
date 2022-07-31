@@ -23,30 +23,32 @@ struct AuthenticationView: View {
                 
                 if authenticationVM.authenticationMode == .register {
                     VStack {
-                        TextField("Username", text: $authenticationVM.registerUsername)
+                        TextField("Email", text: $authenticationVM.registerEmail)
                         SecureField("Password", text: $authenticationVM.registerPassword)
                         Button {
-                            // Register Action
+                            authenticationVM.register()
                         } label: {
                             Text("REGISTER")
                                 .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(.bordered)
                         .tint(authenticationVM.accentColor)
+                        .clipShape(Capsule())
                     }
                     .textFieldStyle(.roundedBorder)
                 } else if authenticationVM.authenticationMode == .login {
                     VStack {
-                        TextField("Username", text: $authenticationVM.loginUsername)
+                        TextField("Email", text: $authenticationVM.loginEmail)
                         SecureField("Password", text: $authenticationVM.loginPassword)
                         Button {
-                            // Login Action
+                            authenticationVM.login()
                         } label: {
                             Text("LOGIN")
                                 .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(.bordered)
                         .tint(authenticationVM.accentColor)
+                        .clipShape(Capsule())
                     }
                     .textFieldStyle(.roundedBorder)
                 }

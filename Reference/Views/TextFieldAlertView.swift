@@ -50,7 +50,7 @@ struct TextFieldAlertView: UIViewControllerRepresentable {
                 
             }
             
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { _ in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default) { _ in
                 self.textfieldText = ""
                 self.showingAlert = false
             })
