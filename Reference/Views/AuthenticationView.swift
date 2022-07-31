@@ -68,6 +68,15 @@ struct AuthenticationView: View {
                         .toastViewStyle(.failure)
                 }
             }
+            .toast(isPresented: $authenticationVM.loginToastShowing, dismissAfter: 2) {
+                if authenticationVM.loginToastResult == .success {
+                    ToastView("Login \(authenticationVM.loginToastResult.rawValue)")
+                        .toastViewStyle(.success)
+                } else {
+                    ToastView("Login \(authenticationVM.loginToastResult.rawValue)")
+                        .toastViewStyle(.failure)
+                }
+            }
         }
     }
 }

@@ -26,11 +26,14 @@ class AuthenticationVM: ObservableObject {
     
     @Published var registerEmail: String = ""
     @Published var registerPassword: String = ""
-    @Published var loginEmail: String = ""
-    @Published var loginPassword: String = ""
-    
     @Published var registerToastShowing = false
     @Published var registerToastResult: AuthenticationResult = .success
+    
+    @Published var loginStatus = false
+    @Published var loginEmail: String = ""
+    @Published var loginPassword: String = ""
+    @Published var loginToastShowing = false
+    @Published var loginToastResult: AuthenticationResult = .success
     
     func register() {
         Auth.auth().createUser(withEmail: registerEmail, password: registerPassword) { result, error in
@@ -51,6 +54,21 @@ class AuthenticationVM: ObservableObject {
     }
     
     func login() {
-        
+        Auth.auth().signIn(withEmail: loginEmail, password: loginPassword) { result, error in
+            if let error = error {
+                print(error.localizedDescription)
+                self.loginToastResult = .failure
+                self.loginToastShowing = true
+                return
+            }
+            
+            if result?.user != nil {
+                self.loginStatus = true
+                self.loginEmail = ""
+                self.loginPassword = ""
+                self.loginToastResult = .success
+                self.loginToastShowing = true
+            }
+        }
     }
 }
