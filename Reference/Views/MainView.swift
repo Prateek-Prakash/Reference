@@ -135,6 +135,7 @@ struct MainView: View {
                 }
                 
                 Section("MISCELLANEOUS") {
+                    Text("Lazy Grid")
                     NavigationLink {
                         DeferView {
                             HierarchicalListView()

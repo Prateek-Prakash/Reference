@@ -45,6 +45,11 @@ class AttributionListVM: ObservableObject {
             licenseUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/LICENSE"
         ),
         AttributionDetails(
+            name: "TMDb",
+            homeUrl: "https://raw.githubusercontent.com/adamayoung/TMDb",
+            licenseUrl: "https://raw.githubusercontent.com/adamayoung/TMDb/main/LICENSE"
+        ),
+        AttributionDetails(
             name: "ToastUI",
             homeUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI",
             licenseUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI/main/LICENSE"

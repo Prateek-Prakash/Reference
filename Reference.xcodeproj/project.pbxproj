@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2886802896CDCB0082446D /* TMDb in Frameworks */ = {isa = PBXBuildFile; productRef = 6E28867F2896CDCB0082446D /* TMDb */; };
 		6E5ECA0C288DB15100F3C45D /* VariousLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */; };
 		6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */; };
 		6E5ECA13288DBC4100F3C45D /* AttributionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */; };
@@ -150,6 +151,7 @@
 				6ED50AAC288F29FE008F0E59 /* FirebaseFirestoreSwift in Frameworks */,
 				6ED50AAA288F29FE008F0E59 /* FirebaseFirestore in Frameworks */,
 				6ED50AB2288F29FE008F0E59 /* FirebaseStorage in Frameworks */,
+				6E2886802896CDCB0082446D /* TMDb in Frameworks */,
 				6ED50AA2288F29FE008F0E59 /* FirebaseAnalytics in Frameworks */,
 				6ED50AB0288F29FE008F0E59 /* FirebaseRemoteConfigSwift in Frameworks */,
 				6EAD59C4288D8CA0004DF069 /* BetterListPicker in Frameworks */,
@@ -325,6 +327,7 @@
 				6ED50AB1288F29FE008F0E59 /* FirebaseStorage */,
 				6E721EFA289604BE00FE3A1C /* ToastUI */,
 				6E721F032896C27B00FE3A1C /* CachedAsyncImage */,
+				6E28867F2896CDCB0082446D /* TMDb */,
 			);
 			productName = Reference;
 			productReference = 6EBE6B18288D072900719861 /* Reference.app */;
@@ -361,6 +364,7 @@
 				6ED50AA0288F29FE008F0E59 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				6E721EF9289604BE00FE3A1C /* XCRemoteSwiftPackageReference "ToastUI" */,
 				6E721F022896C27B00FE3A1C /* XCRemoteSwiftPackageReference "SwiftUI-CachedAsyncImage" */,
+				6E28867E2896CDCA0082446D /* XCRemoteSwiftPackageReference "TMDb" */,
 			);
 			productRefGroup = 6EBE6B19288D072900719861 /* Products */;
 			projectDirPath = "";
@@ -654,6 +658,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6E28867E2896CDCA0082446D /* XCRemoteSwiftPackageReference "TMDb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamayoung/TMDb.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -705,6 +717,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6E28867F2896CDCB0082446D /* TMDb */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E28867E2896CDCA0082446D /* XCRemoteSwiftPackageReference "TMDb" */;
+			productName = TMDb;
+		};
 		6E5ECA24288DF42200F3C45D /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E5ECA23288DF42200F3C45D /* XCRemoteSwiftPackageReference "realm-swift" */;
