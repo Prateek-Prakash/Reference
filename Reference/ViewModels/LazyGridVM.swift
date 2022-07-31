@@ -31,4 +31,12 @@ class LazyGridVM: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    func fetchPoster(path: URL?) -> URL? {
+        if let path = path {
+            return URL(string: "https://image.tmdb.org/t/p/w500\(path.absoluteString)")
+        } else {
+            return nil
+        }
+    }
 }

@@ -7,7 +7,6 @@
 
 import CachedAsyncImage
 import SwiftUI
-import TMDb
 
 struct LazyGridView: View {
     @StateObject var lazyGridVM = LazyGridVM()
@@ -19,7 +18,7 @@ struct LazyGridView: View {
                     if let movies = lazyGridVM.movies {
                         ForEach(movies.indices, id: \.self) { index in
                             let movie = movies[index]
-                            if let poster = movie.posterPath {
+                            if let poster = lazyGridVM.fetchPoster(path: movie.posterPath) {
                                 CachedAsyncImage(url: poster, urlCache: .imageCache) { imagePhase in
                                     switch imagePhase {
                                     case .success(let asyncImage):
