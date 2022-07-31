@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ToastUI
 
 struct AuthenticationView: View {
     @StateObject var authenticationVM = AuthenticationVM()
@@ -58,6 +59,15 @@ struct AuthenticationView: View {
             .padding()
             .navigationTitle("Authentication")
             .navigationBarTitleDisplayMode(.inline)
+            .toast(isPresented: $authenticationVM.registerToastShowing, dismissAfter: 2) {
+                if authenticationVM.registerToastResult == .success {
+                    ToastView("Registration \(authenticationVM.registerToastResult.rawValue)")
+                        .toastViewStyle(.success)
+                } else {
+                    ToastView("Registration \(authenticationVM.registerToastResult.rawValue)")
+                        .toastViewStyle(.failure)
+                }
+            }
         }
     }
 }
