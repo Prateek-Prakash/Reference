@@ -21,37 +21,37 @@ class AttributionListVM: ObservableObject {
         ),
         AttributionDetails(
             name: "Fakery",
-            homeUrl: "https://raw.githubusercontent.com/vadymmarkov/Fakery",
+            homeUrl: "https://github.com/vadymmarkov/Fakery",
             licenseUrl: "https://raw.githubusercontent.com/vadymmarkov/Fakery/master/LICENSE.md"
         ),
         AttributionDetails(
             name: "Firebase-iOS-SDK",
-            homeUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk",
+            homeUrl: "https://github.com/firebase/firebase-ios-sdk",
             licenseUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk/master/LICENSE"
         ),
         AttributionDetails(
             name: "Realm-Swift",
-            homeUrl: "https://raw.githubusercontent.com/realm/realm-swift",
+            homeUrl: "https://github.com/realm/realm-swift",
             licenseUrl: "https://raw.githubusercontent.com/realm/realm-swift/master/LICENSE"
         ),
         AttributionDetails(
             name: "SwiftUI-CachedAsyncImage",
-            homeUrl: "https://raw.githubusercontent.com/lorenzofiamingo/swiftui-cached-async-image",
+            homeUrl: "https://github.com/lorenzofiamingo/swiftui-cached-async-image",
             licenseUrl: "https://raw.githubusercontent.com/lorenzofiamingo/swiftui-cached-async-image/main/LICENSE.md"
         ),
         AttributionDetails(
             name: "TFJS-Models",
-            homeUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models",
+            homeUrl: "https://github.com/tensorflow/tfjs-models",
             licenseUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/LICENSE"
         ),
         AttributionDetails(
             name: "TMDb",
-            homeUrl: "https://raw.githubusercontent.com/adamayoung/TMDb",
+            homeUrl: "https://github.com/adamayoung/TMDb",
             licenseUrl: "https://raw.githubusercontent.com/adamayoung/TMDb/main/LICENSE"
         ),
         AttributionDetails(
             name: "ToastUI",
-            homeUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI",
+            homeUrl: "https://github.com/quanshousio/ToastUI",
             licenseUrl: "https://raw.githubusercontent.com/quanshousio/ToastUI/main/LICENSE"
         )
     ]
