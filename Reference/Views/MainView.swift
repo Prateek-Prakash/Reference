@@ -42,6 +42,7 @@ struct MainView: View {
                         Text("Core NFC")
                     }
                     Text("CloudKit")
+                    Text("Core Image")
                     NavigationLink {
                         DeferView {
                             MapKitView()
@@ -69,7 +70,13 @@ struct MainView: View {
                     } label: {
                         Text("Text Recognition")
                     }
-                    Text("Object Recognition")
+                    NavigationLink {
+                        DeferView {
+                            ObjectDetectionView()
+                        }
+                    } label: {
+                        Text("Object Detection")
+                    }
                     Text("Pose Estimation")
                 }
                 
