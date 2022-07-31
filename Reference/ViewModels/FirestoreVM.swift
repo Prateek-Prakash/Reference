@@ -11,7 +11,6 @@ import SwiftUI
 class FirestoreVM: ObservableObject {
     @AppStorage("loginStatus") var loginStatus = false
     
-    @Published var loaded: Bool = false
     @Published var contacts: [Contact] = []
     
     private var contactsListener: ListenerRegistration?
@@ -19,9 +18,6 @@ class FirestoreVM: ObservableObject {
     init() {
         Task {
             initContactsListener()
-            DispatchQueue.main.async {
-                self.loaded = true
-            }
         }
     }
     

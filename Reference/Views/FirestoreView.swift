@@ -53,12 +53,8 @@ struct FirestoreView: View {
                     .listStyle(.plain)
                 } else {
                     if firestoreVM.loginStatus {
-                        if firestoreVM.loaded {
-                            Text("--••• NO CONTACTS •••--")
-                                .foregroundColor(.secondary)
-                        } else {
-                            ProgressView()
-                        }
+                        Text("--••• NO CONTACTS •••--")
+                            .foregroundColor(.secondary)
                     } else {
                         Text("--••• PLEASE LOGIN •••--")
                             .foregroundColor(.secondary)
