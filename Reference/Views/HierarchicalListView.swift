@@ -16,6 +16,8 @@ struct HierarchicalListView: View {
                 OutlineGroup(hierarchicalListVM.pathRefs, children: \.children) { pathRef in
                     HStack {
                         Image(systemName: pathRef.icon)
+                            .font(.system(size: 15, design: .monospaced))
+                            .frame(minWidth: 30)
                         Text(pathRef.title)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
