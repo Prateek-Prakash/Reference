@@ -15,6 +15,7 @@
 		6E28868A28986E620082446D /* ObjectDetectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868928986E620082446D /* ObjectDetectionVM.swift */; };
 		6E28868C289873540082446D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868B289873540082446D /* CameraManager.swift */; };
 		6E288690289876E70082446D /* CGImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868F289876E70082446D /* CGImageExt.swift */; };
+		6E28869228988D510082446D /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E28869128988D510082446D /* DeepLabV3.mlmodel */; };
 		6E5ECA0C288DB15100F3C45D /* VariousLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */; };
 		6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */; };
 		6E5ECA13288DBC4100F3C45D /* AttributionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */; };
@@ -92,6 +93,7 @@
 		6E28868928986E620082446D /* ObjectDetectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionVM.swift; sourceTree = "<group>"; };
 		6E28868B289873540082446D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		6E28868F289876E70082446D /* CGImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExt.swift; sourceTree = "<group>"; };
+		6E28869128988D510082446D /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 		6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousLabelsView.swift; sourceTree = "<group>"; };
 		6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredIconLabelStyle.swift; sourceTree = "<group>"; };
 		6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionListView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		6E716EFC2895BF1D0090A88B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E28869128988D510082446D /* DeepLabV3.mlmodel */,
 				6E716EFE2895BF450090A88B /* PoseNet100S16FP16.mlmodel */,
 				6E716EFD2895BF450090A88B /* YOLOv3.mlmodel */,
 			);
@@ -422,6 +425,7 @@
 				6E2886822896CE980082446D /* LazyGridView.swift in Sources */,
 				6ED50AC4288FAB3F008F0E59 /* HierarchicalListVM.swift in Sources */,
 				6E721EF82895EC3500FE3A1C /* AuthenticationVM.swift in Sources */,
+				6E28869228988D510082446D /* DeepLabV3.mlmodel in Sources */,
 				6E716F022895CB480090A88B /* CoreNFCView.swift in Sources */,
 				6ED50ACE2890CE90008F0E59 /* ImagePickerView.swift in Sources */,
 				6E5ECA1F288DD8DD00F3C45D /* AttributionDetailsVM.swift in Sources */,

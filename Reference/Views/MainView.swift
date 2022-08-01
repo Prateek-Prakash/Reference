@@ -77,6 +77,7 @@ struct MainView: View {
                     } label: {
                         Text("Object Detection")
                     }
+                    Text("Image Segmentation")
                     Text("Pose Estimation")
                 }
                 

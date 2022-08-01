@@ -45,6 +45,11 @@ class AttributionListVM: ObservableObject {
             licenseUrl: "https://raw.githubusercontent.com/lorenzofiamingo/swiftui-cached-async-image/main/LICENSE.md"
         ),
         AttributionDetails(
+            name: "TensorFlow-Models",
+            homeUrl: "https://github.com/tensorflow/models",
+            licenseUrl: "https://raw.githubusercontent.com/tensorflow/models/master/LICENSE"
+        ),
+        AttributionDetails(
             name: "TFJS-Models",
             homeUrl: "https://github.com/tensorflow/tfjs-models",
             licenseUrl: "https://raw.githubusercontent.com/tensorflow/tfjs-models/master/LICENSE"
