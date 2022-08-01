@@ -52,7 +52,7 @@ class ObjectDetectionVM: NSObject, ObservableObject {
             return NSError(domain: "ObjectDetectionVM", code: -1, userInfo: [NSLocalizedDescriptionKey: "Missing Core ML Model File"])
         }
         do {
-            var visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelUrl))
+            let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelUrl))
             let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { request, error in
                 DispatchQueue.main.async {
                     var sawLights = false
