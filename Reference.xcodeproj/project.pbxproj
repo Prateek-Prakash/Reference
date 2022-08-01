@@ -181,10 +181,10 @@
 		6E5ECA0D288DB6CC00F3C45D /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
-				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
 				6E716EF2289366CA0090A88B /* AppCheckFactory.swift */,
-				6E716EFA2895BC8F0090A88B /* NFCManager.swift */,
 				6E28868B289873540082446D /* CameraManager.swift */,
+				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
+				6E716EFA2895BC8F0090A88B /* NFCManager.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -205,12 +205,12 @@
 				6E2886852896D4490082446D /* AppConfig.swift */,
 				6EAD59C6288D90A3004DF069 /* AppAppearance.swift */,
 				6ED50A86288E04B1008F0E59 /* AppIcon.swift */,
-				6E716EEF28935D670090A88B /* Contact.swift */,
-				6ED50AB7288F5B41008F0E59 /* JSONObjectConfig.swift */,
-				6ED50AB9288F5B99008F0E59 /* JSONArrayConfig.swift */,
-				6ED50AC728903C9F008F0E59 /* PathRef.swift */,
-				6E5ECA16288DC26100F3C45D /* LabelDetails.swift */,
 				6E5ECA1A288DCDD800F3C45D /* AttributionDetails.swift */,
+				6E716EEF28935D670090A88B /* Contact.swift */,
+				6ED50AB9288F5B99008F0E59 /* JSONArrayConfig.swift */,
+				6ED50AB7288F5B41008F0E59 /* JSONObjectConfig.swift */,
+				6E5ECA16288DC26100F3C45D /* LabelDetails.swift */,
+				6ED50AC728903C9F008F0E59 /* PathRef.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,9 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				6E716EE02893003A0090A88B /* ArrayExt.swift */,
+				6E28868F289876E70082446D /* CGImageExt.swift */,
 				6EAD59D2288D9D37004DF069 /* ColorExt.swift */,
 				6E721F052896C28700FE3A1C /* URLCacheExt.swift */,
-				6E28868F289876E70082446D /* CGImageExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,7 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				6EAD59D0288D9958004DF069 /* MainVM.swift */,
+				6E721EFE2896B47300FE3A1C /* MusicKitVM.swift */,
 				6ED50ACB2890CA86008F0E59 /* TextRecognitionVM.swift */,
+				6E28868928986E620082446D /* ObjectDetectionVM.swift */,
 				6E721EF72895EC3500FE3A1C /* AuthenticationVM.swift */,
 				6E716EED28935CA60090A88B /* FirestoreVM.swift */,
 				6ED50AB5288F3ED4008F0E59 /* RemoteConfigVM.swift */,
@@ -249,8 +251,6 @@
 				6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */,
 				6E5ECA18288DCCFA00F3C45D /* AttributionListVM.swift */,
 				6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */,
-				6E721EFE2896B47300FE3A1C /* MusicKitVM.swift */,
-				6E28868928986E620082446D /* ObjectDetectionVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
