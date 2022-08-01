@@ -26,8 +26,11 @@ struct MapKitView: View {
     var body: some View {
         VStack {
             ZStack {
+                // Map
                 Map(coordinateRegion: $coordRegion)
                     .ignoresSafeArea()
+                
+                // Exit Button
                 VStack {
                     let foregroundColor = colorScheme == .light ?
                     Color(red: 97/255, green: 97/255, blue: 95/255, opacity: 95/100) :

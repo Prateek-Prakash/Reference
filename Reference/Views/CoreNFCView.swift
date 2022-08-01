@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CoreNFCView: View {
-    @State var nfcHelper = NFCHelper()
+    @State var nfcManager = NFCManager()
     
     var body: some View {
         VStack {
             List {
                 Button {
-                    nfcHelper.scan(mode: .read)
+                    nfcManager.scan(mode: .read)
                 } label: {
                     HStack {
                         Text("Read NFC Tag")
@@ -24,7 +24,7 @@ struct CoreNFCView: View {
                 }
                 
                 Button {
-                    nfcHelper.scan(mode: .write, text: UUID().uuidString)
+                    nfcManager.scan(mode: .write, text: UUID().uuidString)
                 } label: {
                     HStack {
                         Text("Write NFC Tag")

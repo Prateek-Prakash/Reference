@@ -1,5 +1,5 @@
 //
-//  NFCHelper.swift
+//  NFCManager.swift
 //  Reference
 //
 //  Created by Prateek Prakash on 7/30/22.
@@ -8,17 +8,17 @@
 import CoreNFC
 import Foundation
 
-enum NFCHelperMode: String {
+enum NFCMode: String {
     case read = "Read"
     case write = "Write"
 }
 
-class NFCHelper: NSObject, NFCNDEFReaderSessionDelegate {
+class NFCManager: NSObject, NFCNDEFReaderSessionDelegate {
     var session: NFCNDEFReaderSession?
-    var mode: NFCHelperMode = .read
+    var mode: NFCMode = .read
     var text: String = ""
     
-    func scan(mode: NFCHelperMode, text: String = "") {
+    func scan(mode: NFCMode, text: String = "") {
         guard NFCNDEFReaderSession.readingAvailable else {
             print("NFCWriter: Unsupported Device")
             return

@@ -12,6 +12,7 @@
 		6E2886842896CEA70082446D /* LazyGridVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2886832896CEA70082446D /* LazyGridVM.swift */; };
 		6E2886862896D4490082446D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2886852896D4490082446D /* AppConfig.swift */; };
 		6E2886882897170E0082446D /* ObjectDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2886872897170E0082446D /* ObjectDetectionView.swift */; };
+		6E28868A28986E620082446D /* ObjectDetectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868928986E620082446D /* ObjectDetectionVM.swift */; };
 		6E5ECA0C288DB15100F3C45D /* VariousLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */; };
 		6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */; };
 		6E5ECA13288DBC4100F3C45D /* AttributionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */; };
@@ -33,7 +34,7 @@
 		6E716EEE28935CA60090A88B /* FirestoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EED28935CA60090A88B /* FirestoreVM.swift */; };
 		6E716EF028935D670090A88B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EEF28935D670090A88B /* Contact.swift */; };
 		6E716EF3289366CA0090A88B /* AppCheckFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EF2289366CA0090A88B /* AppCheckFactory.swift */; };
-		6E716EFB2895BC8F0090A88B /* NFCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFA2895BC8F0090A88B /* NFCHelper.swift */; };
+		6E716EFB2895BC8F0090A88B /* NFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFA2895BC8F0090A88B /* NFCManager.swift */; };
 		6E716EFF2895BF450090A88B /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFD2895BF450090A88B /* YOLOv3.mlmodel */; };
 		6E716F002895BF450090A88B /* PoseNet100S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E716EFE2895BF450090A88B /* PoseNet100S16FP16.mlmodel */; };
 		6E716F022895CB480090A88B /* CoreNFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E716F012895CB480090A88B /* CoreNFCView.swift */; };
@@ -86,6 +87,7 @@
 		6E2886832896CEA70082446D /* LazyGridVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGridVM.swift; sourceTree = "<group>"; };
 		6E2886852896D4490082446D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		6E2886872897170E0082446D /* ObjectDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionView.swift; sourceTree = "<group>"; };
+		6E28868928986E620082446D /* ObjectDetectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionVM.swift; sourceTree = "<group>"; };
 		6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousLabelsView.swift; sourceTree = "<group>"; };
 		6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredIconLabelStyle.swift; sourceTree = "<group>"; };
 		6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionListView.swift; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		6E716EEF28935D670090A88B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		6E716EF12893667F0090A88B /* Reference.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reference.entitlements; sourceTree = "<group>"; };
 		6E716EF2289366CA0090A88B /* AppCheckFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheckFactory.swift; sourceTree = "<group>"; };
-		6E716EFA2895BC8F0090A88B /* NFCHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCHelper.swift; sourceTree = "<group>"; };
+		6E716EFA2895BC8F0090A88B /* NFCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCManager.swift; sourceTree = "<group>"; };
 		6E716EFD2895BF450090A88B /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3.mlmodel; sourceTree = "<group>"; };
 		6E716EFE2895BF450090A88B /* PoseNet100S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNet100S16FP16.mlmodel; sourceTree = "<group>"; };
 		6E716F012895CB480090A88B /* CoreNFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNFCView.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 			children = (
 				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
 				6E716EF2289366CA0090A88B /* AppCheckFactory.swift */,
-				6E716EFA2895BC8F0090A88B /* NFCHelper.swift */,
+				6E716EFA2895BC8F0090A88B /* NFCManager.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 				6E5ECA18288DCCFA00F3C45D /* AttributionListVM.swift */,
 				6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */,
 				6E721EFE2896B47300FE3A1C /* MusicKitVM.swift */,
+				6E28868928986E620082446D /* ObjectDetectionVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				6E5ECA15288DC20700F3C45D /* VariousLabelsVM.swift in Sources */,
 				6E2886862896D4490082446D /* AppConfig.swift in Sources */,
 				6ED50AB4288F3E86008F0E59 /* RemoteConfigView.swift in Sources */,
+				6E28868A28986E620082446D /* ObjectDetectionVM.swift in Sources */,
 				6E716EE828934B120090A88B /* VLCKitPlayerView.swift in Sources */,
 				6E716EF028935D670090A88B /* Contact.swift in Sources */,
 				6ED50ABE288F799F008F0E59 /* MapKitView.swift in Sources */,
@@ -442,7 +446,7 @@
 				6E716EE5289341610090A88B /* AVKitPlayerView.swift in Sources */,
 				6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */,
 				6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */,
-				6E716EFB2895BC8F0090A88B /* NFCHelper.swift in Sources */,
+				6E716EFB2895BC8F0090A88B /* NFCManager.swift in Sources */,
 				6E2886882897170E0082446D /* ObjectDetectionView.swift in Sources */,
 				6EBE6B1C288D072900719861 /* ReferenceApp.swift in Sources */,
 				6ED50ABA288F5B99008F0E59 /* JSONArrayConfig.swift in Sources */,
