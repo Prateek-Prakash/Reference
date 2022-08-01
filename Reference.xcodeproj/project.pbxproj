@@ -13,6 +13,7 @@
 		6E2886862896D4490082446D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2886852896D4490082446D /* AppConfig.swift */; };
 		6E2886882897170E0082446D /* ObjectDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2886872897170E0082446D /* ObjectDetectionView.swift */; };
 		6E28868A28986E620082446D /* ObjectDetectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868928986E620082446D /* ObjectDetectionVM.swift */; };
+		6E28868C289873540082446D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868B289873540082446D /* CameraManager.swift */; };
 		6E5ECA0C288DB15100F3C45D /* VariousLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */; };
 		6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */; };
 		6E5ECA13288DBC4100F3C45D /* AttributionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */; };
@@ -88,6 +89,7 @@
 		6E2886852896D4490082446D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		6E2886872897170E0082446D /* ObjectDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionView.swift; sourceTree = "<group>"; };
 		6E28868928986E620082446D /* ObjectDetectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionVM.swift; sourceTree = "<group>"; };
+		6E28868B289873540082446D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousLabelsView.swift; sourceTree = "<group>"; };
 		6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredIconLabelStyle.swift; sourceTree = "<group>"; };
 		6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionListView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */,
 				6E716EF2289366CA0090A88B /* AppCheckFactory.swift */,
 				6E716EFA2895BC8F0090A88B /* NFCManager.swift */,
+				6E28868B289873540082446D /* CameraManager.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				6E716EF028935D670090A88B /* Contact.swift in Sources */,
 				6ED50ABE288F799F008F0E59 /* MapKitView.swift in Sources */,
 				6E721EFF2896B47300FE3A1C /* MusicKitVM.swift in Sources */,
+				6E28868C289873540082446D /* CameraManager.swift in Sources */,
 				6E716EE5289341610090A88B /* AVKitPlayerView.swift in Sources */,
 				6EAD59C7288D90A3004DF069 /* AppAppearance.swift in Sources */,
 				6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */,
