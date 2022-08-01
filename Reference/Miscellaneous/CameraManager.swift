@@ -19,7 +19,7 @@ class CameraManager: ObservableObject {
     
     let session = AVCaptureSession()
     
-    private let sessionQueue = DispatchQueue(label: "CameraManager")
+    private let sessionQueue = DispatchQueue(label: "CameraSessionQ")
     private let videoOutput = AVCaptureVideoDataOutput()
     private var cameraStatus = CameraStatus.unconfigured
     
@@ -63,7 +63,7 @@ class CameraManager: ObservableObject {
             session.commitConfiguration()
         }
         
-        let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
+        let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
         guard let camera = device else {
             cameraStatus = .failed
             return
@@ -85,10 +85,12 @@ class CameraManager: ObservableObject {
         if session.canAddOutput(videoOutput) {
             session.addOutput(videoOutput)
             
+            videoOutput.alwaysDiscardsLateVideoFrames = true
             videoOutput.videoSettings =
             [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
             
             let videoConnection = videoOutput.connection(with: .video)
+            videoConnection?.isEnabled = true
             videoConnection?.videoOrientation = .portrait
         } else {
             cameraStatus = .failed
