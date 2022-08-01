@@ -58,6 +58,7 @@ class CameraManager: ObservableObject {
         }
         
         session.beginConfiguration()
+        session.sessionPreset = .vga640x480
         
         defer {
             session.commitConfiguration()

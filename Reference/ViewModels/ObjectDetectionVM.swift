@@ -62,7 +62,11 @@ class ObjectDetectionVM: NSObject, ObservableObject {
                                 continue
                             }
                             let topLabel = objectObservation.labels[0]
-                            let confidence = topLabel.confidence
+                            let formatter = NumberFormatter()
+                            formatter.numberStyle = .decimal
+                            formatter.minimumFractionDigits = 5
+                            formatter.maximumFractionDigits = 5
+                            let confidence = formatter.string(from: topLabel.confidence as NSNumber)!
                             let identifier = topLabel.identifier
                             print("\(confidence) :: \(identifier)")
                             if identifier == "traffic light" {
