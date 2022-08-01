@@ -28,7 +28,7 @@ struct MapKitView: View {
             ZStack {
                 // Map
                 Map(coordinateRegion: $coordRegion)
-                    .ignoresSafeArea(.all)
+                    .ignoresSafeArea()
                 
                 // Exit Button
                 VStack {

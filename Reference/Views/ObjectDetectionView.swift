@@ -18,17 +18,14 @@ struct ObjectDetectionView: View {
             ZStack {
                 // Frame View
                 if let image = objectDetectionVM.cgImage {
-                    GeometryReader { geo in
-                        Image(decorative: image, scale: 1.0, orientation: .up)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
-                            .clipped()
-                            .ignoresSafeArea(.all)
-                    }
+                    Image(decorative: image, scale: 1.0, orientation: .up)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        .ignoresSafeArea()
                 } else {
                     EmptyView()
-                        .ignoresSafeArea(.all)
+                        .ignoresSafeArea()
                 }
                 
                 // Exit Button
