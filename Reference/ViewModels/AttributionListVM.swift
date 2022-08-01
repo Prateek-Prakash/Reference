@@ -30,6 +30,11 @@ class AttributionListVM: ObservableObject {
             licenseUrl: "https://raw.githubusercontent.com/firebase/firebase-ios-sdk/master/LICENSE"
         ),
         AttributionDetails(
+            name: "PoseNet-CoreML",
+            homeUrl: "https://github.com/infocom-tpo/PoseNet-CoreML",
+            licenseUrl: "https://raw.githubusercontent.com/infocom-tpo/PoseNet-CoreML/master/LICENCE"
+                          ),
+        AttributionDetails(
             name: "Realm-Swift",
             homeUrl: "https://github.com/realm/realm-swift",
             licenseUrl: "https://raw.githubusercontent.com/realm/realm-swift/master/LICENSE"
