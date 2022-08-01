@@ -145,6 +145,13 @@ struct MainView: View {
                 Section("MISCELLANEOUS") {
                     NavigationLink {
                         DeferView {
+                            SpeechUtteranceView()
+                        }
+                    } label: {
+                        Text("Speech Utterance")
+                    }
+                    NavigationLink {
+                        DeferView {
                             LazyGridView()
                         }
                     } label: {
