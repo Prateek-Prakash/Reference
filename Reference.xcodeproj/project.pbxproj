@@ -14,7 +14,6 @@
 		6E2886882897170E0082446D /* ObjectDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2886872897170E0082446D /* ObjectDetectionView.swift */; };
 		6E28868A28986E620082446D /* ObjectDetectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868928986E620082446D /* ObjectDetectionVM.swift */; };
 		6E28868C289873540082446D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868B289873540082446D /* CameraManager.swift */; };
-		6E28868E289875450082446D /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868D289875450082446D /* FrameManager.swift */; };
 		6E288690289876E70082446D /* CGImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28868F289876E70082446D /* CGImageExt.swift */; };
 		6E5ECA0C288DB15100F3C45D /* VariousLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */; };
 		6E5ECA0F288DB71600F3C45D /* ColoredIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */; };
@@ -92,7 +91,6 @@
 		6E2886872897170E0082446D /* ObjectDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionView.swift; sourceTree = "<group>"; };
 		6E28868928986E620082446D /* ObjectDetectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionVM.swift; sourceTree = "<group>"; };
 		6E28868B289873540082446D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
-		6E28868D289875450082446D /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		6E28868F289876E70082446D /* CGImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExt.swift; sourceTree = "<group>"; };
 		6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousLabelsView.swift; sourceTree = "<group>"; };
 		6E5ECA0E288DB71600F3C45D /* ColoredIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredIconLabelStyle.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				6E716EF2289366CA0090A88B /* AppCheckFactory.swift */,
 				6E716EFA2895BC8F0090A88B /* NFCManager.swift */,
 				6E28868B289873540082446D /* CameraManager.swift */,
-				6E28868D289875450082446D /* FrameManager.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E28868E289875450082446D /* FrameManager.swift in Sources */,
 				6E2886842896CEA70082446D /* LazyGridVM.swift in Sources */,
 				6EBE6B1E288D072900719861 /* MainView.swift in Sources */,
 				6EAD59D1288D9958004DF069 /* MainVM.swift in Sources */,

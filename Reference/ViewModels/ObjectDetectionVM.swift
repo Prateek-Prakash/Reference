@@ -5,17 +5,34 @@
 //  Created by Prateek Prakash on 8/1/22.
 //
 
+import AVFoundation
 import SwiftUI
+import UIKit
+import Vision
 
-class ObjectDetectionVM: ObservableObject {
+class ObjectDetectionVM: NSObject, ObservableObject {
     @Published var cgImage: CGImage?
+    @Published var currentBuffer: CVPixelBuffer?
+    @Published var lightsFound = false
+    
+    let videoOutputQueue = DispatchQueue(label: "VideoOutputQ", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
     private let context = CIContext()
     private let cameraManager = CameraManager.shared
-    private let frameManager = FrameManager.shared
     
-    init() {        
-        frameManager.$currentBuffer
+    private var requests = [VNRequest]()
+    
+    override init() {
+        super.init()
+        
+        // Capture Delegate
+        CameraManager.shared.setDelegate(self, queue: videoOutputQueue)
+        
+        // Core ML Model
+        setupVision()
+        
+        // CGImage
+        $currentBuffer
             .receive(on: RunLoop.main)
             .compactMap { buffer in
                 guard let image = CGImage.create(from: buffer) else {
@@ -25,5 +42,83 @@ class ObjectDetectionVM: ObservableObject {
                 return self.context.createCGImage(ciImage, from: ciImage.extent)
             }
             .assign(to: &$cgImage)
+    }
+    
+    @discardableResult
+    func setupVision() -> NSError? {
+        let error: NSError! = nil
+        
+        guard let modelUrl = Bundle.main.url(forResource: "YOLOv3", withExtension: "mlmodelc") else {
+            return NSError(domain: "ObjectDetectionVM", code: -1, userInfo: [NSLocalizedDescriptionKey: "Missing Core ML Model File"])
+        }
+        do {
+            var visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelUrl))
+            let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { request, error in
+                DispatchQueue.main.async {
+                    var sawLights = false
+                    if let results = request.results {
+                        for observation in results where observation is VNRecognizedObjectObservation {
+                            guard let objectObservation = observation as? VNRecognizedObjectObservation else {
+                                continue
+                            }
+                            let topLabel = objectObservation.labels[0]
+                            let confidence = topLabel.confidence
+                            let identifier = topLabel.identifier
+                            print("\(confidence) :: \(identifier)")
+                            if identifier == "traffic light" {
+                                sawLights = true
+                            }
+                        }
+                    }
+                    self.lightsFound = sawLights
+                }
+            })
+            self.requests = [objectRecognition]
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        return error
+    }
+    
+    func exifOrientation() -> CGImagePropertyOrientation {
+        let deviceOrientation = UIDevice.current.orientation
+        let exifOrientation: CGImagePropertyOrientation
+        
+        switch deviceOrientation {
+        case UIDeviceOrientation.portraitUpsideDown:
+            exifOrientation = .left
+        case UIDeviceOrientation.landscapeLeft:
+            exifOrientation = .upMirrored
+        case UIDeviceOrientation.landscapeRight:
+            exifOrientation = .down
+        case UIDeviceOrientation.portrait:
+            exifOrientation = .up
+        default:
+            exifOrientation = .up
+        }
+        return exifOrientation
+    }
+}
+
+extension ObjectDetectionVM: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        if let buffer = sampleBuffer.imageBuffer {
+            DispatchQueue.main.async {
+                self.currentBuffer = buffer
+            }
+        }
+        
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        
+        let orientation = exifOrientation()
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: orientation, options: [:])
+        do {
+            try handler.perform(self.requests)
+        } catch {
+            print(error)
+        }
     }
 }
