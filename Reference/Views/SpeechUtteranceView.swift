@@ -81,7 +81,7 @@ struct SpeechUtteranceView: View {
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.pitchMultiplier = 1.0
-        utterance.rate = 1.0
+        utterance.rate = 0.55
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
