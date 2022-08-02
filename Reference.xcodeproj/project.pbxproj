@@ -240,19 +240,19 @@
 		6EAD59CF288D96D7004DF069 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */,
+				6E5ECA18288DCCFA00F3C45D /* AttributionListVM.swift */,
+				6E721EF72895EC3500FE3A1C /* AuthenticationVM.swift */,
+				6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */,
+				6E716EED28935CA60090A88B /* FirestoreVM.swift */,
+				6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */,
+				6E2886832896CEA70082446D /* LazyGridVM.swift */,
 				6EAD59D0288D9958004DF069 /* MainVM.swift */,
 				6E721EFE2896B47300FE3A1C /* MusicKitVM.swift */,
-				6ED50ACB2890CA86008F0E59 /* TextRecognitionVM.swift */,
 				6E28868928986E620082446D /* ObjectDetectionVM.swift */,
-				6E721EF72895EC3500FE3A1C /* AuthenticationVM.swift */,
-				6E716EED28935CA60090A88B /* FirestoreVM.swift */,
 				6ED50AB5288F3ED4008F0E59 /* RemoteConfigVM.swift */,
-				6E2886832896CEA70082446D /* LazyGridVM.swift */,
-				6ED50AC3288FAB3F008F0E59 /* HierarchicalListVM.swift */,
+				6ED50ACB2890CA86008F0E59 /* TextRecognitionVM.swift */,
 				6E5ECA14288DC20700F3C45D /* VariousLabelsVM.swift */,
-				6ED50A9C288EEC63008F0E59 /* FakeryDataVM.swift */,
-				6E5ECA18288DCCFA00F3C45D /* AttributionListVM.swift */,
-				6E5ECA1E288DD8DD00F3C45D /* AttributionDetailsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -296,28 +296,28 @@
 		6EBE6B29288D07E200719861 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6EAD59C8288D93D1004DF069 /* DeferView.swift */,
-				6EBE6B1D288D072900719861 /* MainView.swift */,
+				6E5ECA1C288DD18B00F3C45D /* AttributionDetailsView.swift */,
+				6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */,
+				6E721EF52895EBF200FE3A1C /* AuthenticationView.swift */,
+				6E716EE4289341610090A88B /* AVKitPlayerView.swift */,
 				6E716F012895CB480090A88B /* CoreNFCView.swift */,
+				6E716EDE2892FA430090A88B /* CustomWordsView.swift */,
+				6EAD59C8288D93D1004DF069 /* DeferView.swift */,
+				6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */,
+				6E716EEB289354090090A88B /* FirestoreView.swift */,
+				6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */,
+				6ED50ACD2890CE90008F0E59 /* ImagePickerView.swift */,
+				6E2886812896CE980082446D /* LazyGridView.swift */,
+				6EBE6B1D288D072900719861 /* MainView.swift */,
 				6ED50ABD288F799F008F0E59 /* MapKitView.swift */,
 				6E721EFC2896B44500FE3A1C /* MusicKitView.swift */,
-				6ED50AC92890CA48008F0E59 /* TextRecognitionView.swift */,
 				6E2886872897170E0082446D /* ObjectDetectionView.swift */,
-				6ED50ACD2890CE90008F0E59 /* ImagePickerView.swift */,
-				6E716EDE2892FA430090A88B /* CustomWordsView.swift */,
-				6E716EE2289304F70090A88B /* TextFieldAlertView.swift */,
-				6E721EF52895EBF200FE3A1C /* AuthenticationView.swift */,
-				6E716EEB289354090090A88B /* FirestoreView.swift */,
 				6ED50AB3288F3E86008F0E59 /* RemoteConfigView.swift */,
-				6E716EE4289341610090A88B /* AVKitPlayerView.swift */,
-				6E716EE728934B120090A88B /* VLCKitPlayerView.swift */,
 				6E28869328989E210082446D /* SpeechUtteranceView.swift */,
-				6E2886812896CE980082446D /* LazyGridView.swift */,
-				6ED50AC1288FAA26008F0E59 /* HierarchicalListView.swift */,
+				6E716EE2289304F70090A88B /* TextFieldAlertView.swift */,
+				6ED50AC92890CA48008F0E59 /* TextRecognitionView.swift */,
 				6E5ECA0B288DB15100F3C45D /* VariousLabelsView.swift */,
-				6ED50A9A288EEBD0008F0E59 /* FakeryDataView.swift */,
-				6E5ECA12288DBC4100F3C45D /* AttributionListView.swift */,
-				6E5ECA1C288DD18B00F3C45D /* AttributionDetailsView.swift */,
+				6E716EE728934B120090A88B /* VLCKitPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
