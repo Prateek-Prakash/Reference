@@ -13,7 +13,6 @@ import Vision
 class ObjectDetectionVM: NSObject, ObservableObject {
     @Published var cgImage: CGImage?
     @Published var currentBuffer: CVPixelBuffer?
-    @Published var lightsFound = false
     
     let videoOutputQueue = DispatchQueue(label: "VideoOutputQ", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
@@ -55,7 +54,6 @@ class ObjectDetectionVM: NSObject, ObservableObject {
             let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelUrl))
             let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { request, error in
                 DispatchQueue.main.async {
-                    var sawLights = false
                     if let results = request.results {
                         for observation in results where observation is VNRecognizedObjectObservation {
                             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
@@ -69,12 +67,8 @@ class ObjectDetectionVM: NSObject, ObservableObject {
                             let confidence = formatter.string(from: topLabel.confidence as NSNumber)!
                             let identifier = topLabel.identifier
                             print("\(confidence) :: \(identifier)")
-                            if identifier == "traffic light" {
-                                sawLights = true
-                            }
                         }
                     }
-                    self.lightsFound = sawLights
                 }
             })
             self.requests = [objectRecognition]
@@ -117,12 +111,14 @@ extension ObjectDetectionVM: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         
-        let orientation = exifOrientation()
-        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: orientation, options: [:])
-        do {
-            try handler.perform(self.requests)
-        } catch {
-            print(error)
+        DispatchQueue.global(qos: .background).async {
+            let orientation = self.exifOrientation()
+            let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: orientation, options: [:])
+            do {
+                try handler.perform(self.requests)
+            } catch {
+                print(error)
+            }
         }
     }
 }
