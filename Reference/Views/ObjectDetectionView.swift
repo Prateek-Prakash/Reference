@@ -19,10 +19,19 @@ struct ObjectDetectionView: View {
                 // Frame View
                 if let image = objectDetectionVM.cgImage {
                     Image(decorative: image, scale: 1.0, orientation: .up)
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .ignoresSafeArea()
+                        .overlay(
+                            ForEach(objectDetectionVM.boundingBoxes.indices, id: \.self) { index in
+                                let box = objectDetectionVM.boundingBoxes[index]
+                                Rectangle()
+                                    .path(in: box)
+                                    .stroke(Color.accentColor, lineWidth: 2)
+                                let label = objectDetectionVM.boxLabels[index]
+                                Text(label)
+                                    .font(.system(size: 10, weight: .bold))
+                                    .position(x: box.midX, y: box.minY)
+                                    .foregroundColor(.white)
+                            }
+                        )
                 } else {
                     EmptyView()
                         .ignoresSafeArea()

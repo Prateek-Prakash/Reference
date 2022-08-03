@@ -13,6 +13,8 @@ import Vision
 class ObjectDetectionVM: NSObject, ObservableObject {
     @Published var cgImage: CGImage?
     @Published var currentBuffer: CVPixelBuffer?
+    @Published var boundingBoxes: [CGRect] = []
+    @Published var boxLabels: [String] = []
     
     let videoOutputQueue = DispatchQueue(label: "VideoOutputQ", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
@@ -55,6 +57,8 @@ class ObjectDetectionVM: NSObject, ObservableObject {
             let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { request, error in
                 DispatchQueue.main.async {
                     if let results = request.results {
+                        self.boundingBoxes = []
+                        self.boxLabels = []
                         for observation in results where observation is VNRecognizedObjectObservation {
                             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                                 continue
@@ -62,11 +66,20 @@ class ObjectDetectionVM: NSObject, ObservableObject {
                             let topLabel = objectObservation.labels[0]
                             let formatter = NumberFormatter()
                             formatter.numberStyle = .decimal
-                            formatter.minimumFractionDigits = 5
-                            formatter.maximumFractionDigits = 5
+                            formatter.minimumFractionDigits = 2
+                            formatter.maximumFractionDigits = 2
                             let confidence = formatter.string(from: topLabel.confidence as NSNumber)!
-                            let identifier = topLabel.identifier
-                            print("\(confidence) :: \(identifier)")
+                            let identifier = topLabel.identifier.uppercased()
+                            let box = objectObservation.boundingBox
+                            print("\(confidence) • \(identifier)")
+                            print(box)
+                            if let cgImage = self.cgImage {
+                                let flipped = CGRect(x: box.origin.x, y: 1 - box.origin.y, width: box.width, height: box.height)
+                                let converted = VNImageRectForNormalizedRect(flipped, cgImage.width, cgImage.height)
+                                let fixed = CGRect(x: converted.origin.x, y: converted.origin.y - converted.height, width: converted.width, height: converted.height)
+                                self.boundingBoxes.append(fixed)
+                                self.boxLabels.append(identifier)
+                            }
                         }
                     }
                 }
@@ -77,25 +90,6 @@ class ObjectDetectionVM: NSObject, ObservableObject {
         }
         
         return error
-    }
-    
-    func exifOrientation() -> CGImagePropertyOrientation {
-        let deviceOrientation = UIDevice.current.orientation
-        let exifOrientation: CGImagePropertyOrientation
-        
-        switch deviceOrientation {
-        case UIDeviceOrientation.portraitUpsideDown:
-            exifOrientation = .left
-        case UIDeviceOrientation.landscapeLeft:
-            exifOrientation = .upMirrored
-        case UIDeviceOrientation.landscapeRight:
-            exifOrientation = .down
-        case UIDeviceOrientation.portrait:
-            exifOrientation = .up
-        default:
-            exifOrientation = .up
-        }
-        return exifOrientation
     }
 }
 
@@ -112,8 +106,7 @@ extension ObjectDetectionVM: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         
         DispatchQueue.global(qos: .background).async {
-            let orientation = self.exifOrientation()
-            let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: orientation, options: [:])
+            let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:])
             do {
                 try handler.perform(self.requests)
             } catch {
