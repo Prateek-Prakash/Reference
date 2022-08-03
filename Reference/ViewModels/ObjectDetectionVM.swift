@@ -49,7 +49,7 @@ class ObjectDetectionVM: NSObject, ObservableObject {
     func setupVision() -> NSError? {
         let error: NSError! = nil
         
-        guard let modelUrl = Bundle.main.url(forResource: "YOLOv3", withExtension: "mlmodelc") else {
+        guard let modelUrl = Bundle.main.url(forResource: "YOLOv3Tiny", withExtension: "mlmodelc") else {
             return NSError(domain: "ObjectDetectionVM", code: -1, userInfo: [NSLocalizedDescriptionKey: "Missing Core ML Model File"])
         }
         do {

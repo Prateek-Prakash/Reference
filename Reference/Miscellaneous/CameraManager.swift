@@ -88,7 +88,7 @@ class CameraManager: ObservableObject {
             
             videoOutput.alwaysDiscardsLateVideoFrames = true
             videoOutput.videoSettings =
-            [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
+            [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
             
             let videoConnection = videoOutput.connection(with: .video)
             videoConnection?.isEnabled = true
