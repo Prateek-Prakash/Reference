@@ -5,9 +5,11 @@
 //  Created by Prateek Prakash on 7/24/22.
 //
 
+import AdSupport
 import AVKit
 import BetterListPicker
 import SwiftUI
+import AppTrackingTransparency
 
 struct MainView: View {
     @StateObject var mainVM = MainVM()
@@ -183,6 +185,20 @@ struct MainView: View {
                     } label: {
                         HStack {
                             Text("Generate UUID")
+                            Spacer()
+                            Image(systemName: "doc.on.doc.fill")
+                        }
+                    }
+                    Button {
+                        ATTrackingManager.requestTrackingAuthorization { _ in
+                            // Nothing
+                        }
+                        var idfa = ASIdentifierManager.identifierForAdvertising
+                        UIPasteboard.general.string = idfa
+                        print(idfa)
+                    } label: {
+                        HStack {
+                            Text("Copy IDFA")
                             Spacer()
                             Image(systemName: "doc.on.doc.fill")
                         }
